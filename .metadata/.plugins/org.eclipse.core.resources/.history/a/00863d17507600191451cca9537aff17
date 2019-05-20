@@ -1,0 +1,10 @@
+package com.fuller.DungeonTrip.render;
+
+public class RenderMaster {
+	
+	public static void render()
+	{
+		
+	}
+
+}

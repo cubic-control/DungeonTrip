@@ -1,0 +1,63 @@
+package com.fuller.DungeonTrip;
+
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.glfw.GLFWKeyCallbackI;
+
+public class InputManager {
+	
+	public static void input(Window window)
+	{
+		processInput(window);
+	}
+	
+	static void processInput(Window window)
+	{
+		GLFWKeyCallbackI keyCallback = null;
+
+		try
+		{
+			keyCallback = GLFW.glfwSetKeyCallback(window.getWindow(), (handle, key, scancode, action, mods) -> {
+				if(action == GLFW.GLFW_PRESS)
+				{
+					pressInput(key, window);
+				}
+				else if(action == GLFW.GLFW_RELEASE)
+				{
+					
+				}
+			});
+
+			if(keyCallback != null)
+			{
+				throw new IllegalStateException("another keyboard handler is already registered!");
+			}
+		}
+		catch (Exception e)
+		{
+			GLFW.glfwSetKeyCallback(window.getWindow(), keyCallback);
+			throw e;
+		}
+	}
+	
+	static void pressInput(int key, Window window)
+	{
+		switch(key)
+		{
+		case GLFW.GLFW_KEY_ESCAPE:
+			window.destroy();
+			break;
+		case GLFW.GLFW_KEY_SPACE:
+			System.out.println("Print Space");
+			break;
+		}
+	}
+	
+	static void releaseInput(int key)
+	{
+		switch(key)
+		{
+		
+		}
+	}
+
+}

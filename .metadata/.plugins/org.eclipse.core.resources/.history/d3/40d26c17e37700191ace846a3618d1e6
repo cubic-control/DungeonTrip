@@ -1,0 +1,48 @@
+package com.fuller.DungeonTrip;
+
+import org.joml.Vector3f;
+import org.lwjgl.glfw.GLFW;
+
+import com.fuller.DungeonTrip.render.RenderMaster;
+
+public class TickMaster {
+	
+	public static void init()
+	{
+		
+	}
+	
+	public static void tick()
+	{
+		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_ESCAPE))
+		{
+			Refs.window.close();
+		}
+		if(Refs.window.input.isKeyPressed(GLFW.GLFW_KEY_SPACE))
+		{
+			System.out.println("Space Print");
+		}
+		if(Refs.window.input.isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
+		{
+			System.out.println("click");
+		}
+		// WASD
+		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_A))
+		{
+			RenderMaster.camera.getPosition().sub(new Vector3f(-1, 0, 0));
+		}
+		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_D))
+		{
+			RenderMaster.camera.getPosition().sub(new Vector3f(1, 0, 0));
+		}
+		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_W))
+		{
+			RenderMaster.camera.getPosition().sub(new Vector3f(0, 1, 0));
+		}
+		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_S))
+		{
+			RenderMaster.camera.getPosition().sub(new Vector3f(0, -1, 0));
+		}
+	}
+
+}

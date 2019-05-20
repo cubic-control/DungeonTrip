@@ -1,0 +1,21 @@
+package com.fuller.DungeonTrip.render;
+
+import org.lwjgl.opengl.GL11;
+
+import com.fuller.DungeonTrip.Refs;
+
+public class RenderMaster {
+	static Texture tex;
+	
+	public void init()
+	{
+		tex = new Texture(Refs.res + "assets/textures/test.png");
+	}
+	
+	public static void render()
+	{
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		tex.bind();
+	}
+
+}

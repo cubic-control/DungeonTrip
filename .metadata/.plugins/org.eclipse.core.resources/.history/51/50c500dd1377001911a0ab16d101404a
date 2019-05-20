@@ -1,0 +1,23 @@
+package com.fuller.DungeonTrip;
+
+import org.lwjgl.glfw.GLFW;
+
+public class Input {
+	private static long window;
+	
+	public Input(long win)
+	{
+		window = win;
+	}
+	
+	public static boolean isKeyDown(int key)
+	{
+		return GLFW.glfwGetKey(window, key) == 1;
+	}
+	
+	public static boolean isMouseButtonDown(int button)
+	{
+		return GLFW.glfwGetMouseButton(window, button) == 1;
+	}
+
+}

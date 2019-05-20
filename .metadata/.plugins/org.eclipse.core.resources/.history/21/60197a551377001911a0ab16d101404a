@@ -1,0 +1,15 @@
+package com.fuller.DungeonTrip;
+
+public class TickMaster {
+	
+	public static void init()
+	{
+		
+	}
+	
+	public static void tick()
+	{
+		
+	}
+
+}

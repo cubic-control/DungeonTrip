@@ -1,0 +1,30 @@
+package com.fuller.DungeonTrip;
+
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+public class Log {
+	Logger logger;
+	
+	public Log(String time)
+	{
+		logger = Logger.getLogger("Dungeon Trip Log");
+		FileHandler fh;
+		
+		try
+		{
+			fh = new FileHandler("./logs/" + time + ".log");
+			logger.addHandler(fh);
+			SimpleFormatter formatter = new SimpleFormatter();
+			fh.setFormatter(formatter);
+			
+			logger.info("Log Test");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

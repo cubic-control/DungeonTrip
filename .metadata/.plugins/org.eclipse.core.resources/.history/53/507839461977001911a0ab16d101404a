@@ -1,0 +1,51 @@
+package com.fuller.DungeonTrip;
+
+import java.util.Arrays;
+
+import org.lwjgl.glfw.GLFW;
+
+public class Input {
+	private long window;
+	
+	private Boolean[] keys;
+	
+	public Input(long win)
+	{
+		window = win;
+		
+		keys = new Boolean[GLFW.GLFW_KEY_LAST];
+		Arrays.fill(keys, Boolean.FALSE);
+	}
+	
+	public boolean isKeyDown(int key)
+	{
+		return GLFW.glfwGetKey(window, key) == 1;
+	}
+	
+	public boolean isKeyPressed(int key)
+	{
+		return (isKeyDown(key) && !keys[key]);
+	}
+	
+	public boolean isKeyReleased(int key)
+	{
+		return (!isKeyDown(key) && keys[key]);
+	}
+	
+	public boolean isMouseButtonDown(int button)
+	{
+		return GLFW.glfwGetMouseButton(window, button) == 1;
+	}
+	
+	public void update()
+	{
+		for(int i = 0; i < GLFW.GLFW_KEY_LAST; i++)
+		{
+			if(GLFW.glfwGetKeyName(i, GLFW.glfwGetKeyScancode(i)) != null && i != GLFW.GLFW_KEY_UNKNOWN)
+			{
+				keys[i] = isKeyDown(i);
+			}
+		}
+	}
+
+}

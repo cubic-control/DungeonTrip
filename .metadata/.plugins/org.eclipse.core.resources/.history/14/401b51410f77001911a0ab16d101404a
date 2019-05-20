@@ -1,0 +1,50 @@
+package com.fuller.DungeonTrip.render;
+
+import org.joml.Vector3f;
+import org.lwjgl.opengl.GL11;
+
+import com.fuller.DungeonTrip.Refs;
+
+public class RenderMaster {
+	static Texture tex;
+	static Model model;
+	static Shader shader;
+	static Camera camera;
+	
+	public static void init()
+	{
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		tex = new Texture(Refs.res + "assets/textures/test.png");
+		model = new Model(
+				new float[] {
+						-0.5f, 0.5f, 0,
+						0.5f, 0.5f, 0,
+						0.5f, -0.5f, 0,
+						-0.5f, -0.5f, 0
+				},
+				new float[] {
+						0, 0,
+						1, 0,
+						1, 1,
+						0, 1
+				},
+				new int[] {
+						0, 1, 2,
+						2, 3, 0
+				}
+				);
+		shader = new Shader("shader");
+		camera = new Camera(640, 480);
+		camera.setPosition(new Vector3f(-100, 0, 0));
+	}
+	
+	public static void render()
+	{
+		shader.bind();
+		shader.setUniform("sampler", 0);
+		shader.setUniform("projection", camera.getProjection().scale(64));
+		tex.bind(0);
+		model.render();
+	}
+
+}
