@@ -1,7 +1,7 @@
 package com.fuller.DungeonTrip.world;
 
 public class Tile {
-	public static Tile tiles[] = new Tile[16];
+	public static Tile tiles[] = new Tile[256];
 	public static byte not = 0;
 	
 	public static final Tile test_tile = new Tile("grass");

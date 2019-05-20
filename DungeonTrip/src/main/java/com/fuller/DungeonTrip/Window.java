@@ -33,6 +33,10 @@ public class Window {
 	
 	public void init()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Window Init Start.");
+		}
 		GLFW.glfwWindowHint(GLFW.GLFW_VISIBLE, GLFW.GLFW_FALSE);
 		
 		window = GLFW.glfwCreateWindow(width, height, title, fullscreen ? GLFW.glfwGetPrimaryMonitor() : 0, 0);
@@ -59,15 +63,28 @@ public class Window {
 		GLFW.glfwShowWindow(window);
 		
 		input = new Input(window);
+		
+		if(Refs.debug)
+		{
+			System.out.println("Window Init End.");
+		}
 	}
 	
 	public void close()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Window Closing.");
+		}
 		GLFW.glfwSetWindowShouldClose(window, true);
 	}
 	
 	public void destroy()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Window Terminating.");
+		}
 		GLFW.glfwDestroyWindow(window);
 		GLFW.glfwTerminate();
 	}

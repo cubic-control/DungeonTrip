@@ -1,9 +1,16 @@
 package com.fuller.DungeonTrip.world;
 
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
+
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
+import org.lwjgl.BufferUtils;
+import org.lwjgl.stb.STBImage;
 
+import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.render.Camera;
@@ -17,6 +24,65 @@ public class World {
 	private int scale;
 	
 	private Matrix4f world;
+	
+	public World(String world)
+	{
+		try {
+			tileSheet(world);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//ByteBuffer entity_sheet = STBImage.stbi_load(Refs.res + "assets/levels/" + world + "_entity.png", w, h, comp, 4);
+		
+		
+		//STBImage.stbi_image_free(entity_sheet);
+	}
+	
+	private void tileSheet(String world) throws IOException
+	{
+		IntBuffer w = BufferUtils.createIntBuffer(1);
+		IntBuffer h = BufferUtils.createIntBuffer(1);
+		IntBuffer comp = BufferUtils.createIntBuffer(1);
+		
+		ByteBuffer tile_sheet = STBImage.stbi_load(Refs.res + "assets/levels/" + world + "_tiles.png", w, h, comp, 4);
+		
+		width = w.get();
+		height = h.get();
+		scale = 16;
+		
+		this.world = new Matrix4f().setTranslation(new Vector3f(0));
+		this.world.scale(scale);
+		
+		tiles = new byte[width * height];
+		bounding_boxes = new AABB[width * height];
+		
+		for(int y = 0; y < height; y++)
+		{
+			for(int x = 0; x < width; x++)
+			{
+				int red = (tile_sheet.get(x + y * width) >> 16) & 0xFF;
+				System.out.println(red);
+				Tile t;
+				
+				try
+				{
+					t = Tile.tiles[red];
+				}
+				catch(ArrayIndexOutOfBoundsException e)
+				{
+					//TODO: Set Tiles to 256 to avoid errors for now: Change back later. (255)
+					t = null;
+				}
+				
+				if(t != null)
+				{
+					setTile(t, x, y);
+				}
+			}
+		}
+		STBImage.stbi_image_free(tile_sheet);
+	}
 	
 	public World()
 	{
@@ -78,7 +144,7 @@ public class World {
 	
 	public void setTile(Tile tile, int x, int y)
 	{
-		tiles[x + y * width] = tile.getId();
+		tiles[x + y * width] = tile.getId(); //TODO: ERROR HERE
 		
 		if(tile.isSolid())
 		{

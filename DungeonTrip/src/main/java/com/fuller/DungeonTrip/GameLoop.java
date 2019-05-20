@@ -14,6 +14,10 @@ public class GameLoop {
 	
 	public void run(Window window)
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Game Loop Start.");
+		}
 		isPaused = false;
 		this.window = window;
 		/*
@@ -44,8 +48,17 @@ public class GameLoop {
 	
 	public void init()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Master Init Start.");
+		}
 		TickMaster.init();
 		RenderMaster.init();
+		
+		if(Refs.debug)
+		{
+			System.out.println("Master Init End.");
+		}
 	}
 	
 	private void gameLoop()

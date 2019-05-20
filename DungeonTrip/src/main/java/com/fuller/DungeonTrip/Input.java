@@ -11,6 +11,10 @@ public class Input {
 	
 	public Input(long win)
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Input Init Start.");
+		}
 		window = win;
 		
 		keys = new Boolean[GLFW.GLFW_KEY_LAST];
@@ -21,6 +25,11 @@ public class Input {
 		if(present)
 		{
 			System.out.println("Controller 1 is present!");
+		}
+		
+		if(Refs.debug)
+		{
+			System.out.println("Input Init End.");
 		}
 	}
 	

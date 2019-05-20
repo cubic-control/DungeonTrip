@@ -11,9 +11,9 @@ public class App
 	
     public static void main( String[] args )
     {
-    	// Create Log Before This point.
+    	OutputRedirector.redirect();
+    	
     	String time = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss").format(new Date());
-    	//log = new Log(time);
     	System.out.println("New initialization on: " + time);
     	
         if(!GLFW.glfwInit())
@@ -21,6 +21,7 @@ public class App
         	throw new IllegalStateException("Failed to initialize GLFW");
         }
         Window.setCallbacks();
+        
         // Create Classes Here
         Window window = new Window(640, 480, "Dungeon Trip");
         GameLoop loop = new GameLoop();
@@ -30,7 +31,9 @@ public class App
         {
         	if(args[i].contains("-dev"))
         	{
-        		// Turn Dev Mode On
+        		// Set To False When Released
+        		Refs.dev = true;
+        		System.out.println("DevMode Active.");
         	}
         	if(args[i].contains("-fullscreen"))
         	{
@@ -38,10 +41,11 @@ public class App
         	}
         	if(args[i].contains("-debug"))
         	{
-        		// Use Extra Log Prints For Debugging
+        		Refs.debug = true;
+        		System.out.println("Debug Active.");
         	}
         }
-        // Initialize Classes Here
+        
         window.init();
         Refs.window = window;
         

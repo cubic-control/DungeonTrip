@@ -8,7 +8,14 @@ public class TickMaster {
 	
 	public static void init()
 	{
-		
+		if(Refs.debug)
+		{
+			System.out.println("Tick Master Init Start.");
+		}
+		if(Refs.debug)
+		{
+			System.out.println("Tick Master Init End.");
+		}
 	}
 	
 	public static void tick()
