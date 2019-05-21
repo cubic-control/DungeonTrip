@@ -17,7 +17,7 @@ import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.Shader;
 
 public class World {
-	private final int view = 24;
+	private int viewX, viewY;
 	private byte[] tiles;
 	private AABB[] bounding_boxes;
 	private int width, height;
@@ -47,6 +47,11 @@ public class World {
 		
 		ByteBuffer tile_sheet = STBImage.stbi_load(Refs.res + "assets/levels/" + world + "_tiles.png", w, h, comp, 4);
 		
+		if(tile_sheet == null)
+		{
+			throw new RuntimeException("Failed to load level file!" + System.lineSeparator() + STBImage.stbi_failure_reason());
+		}
+		
 		width = w.get();
 		height = h.get();
 		scale = 16;
@@ -61,7 +66,7 @@ public class World {
 		{
 			for(int x = 0; x < width; x++)
 			{
-				int red = (tile_sheet.get(x + y * width) >> 16) & 0xFF;
+				int red = (tile_sheet.get((x + y * width) * 4)) & 0xFF;
 				System.out.println(red);
 				Tile t;
 				
@@ -71,7 +76,6 @@ public class World {
 				}
 				catch(ArrayIndexOutOfBoundsException e)
 				{
-					//TODO: Set Tiles to 256 to avoid errors for now: Change back later. (255)
 					t = null;
 				}
 				
@@ -97,20 +101,26 @@ public class World {
 		world.scale(scale);
 	}
 	
-	public void render(TileRenderer render, Shader shader, Camera camera, Window window)
+	public void calculateView(Window window)
 	{
-		int posX = ((int)camera.getPosition().x + (window.getWidth() / 2)) / (scale * 2);
-		int posY = ((int)camera.getPosition().y - (window.getHeight() / 2)) / (scale * 2);
+		viewX = (window.getWidth() / (scale * 2)) + 4;
+		viewY = (window.getHeight() / (scale * 2)) + 4;
+	}
+	
+	public void render(TileRenderer render, Shader shader, Camera camera)
+	{
+		int posX = (int)camera.getPosition().x / (scale * 2);
+		int posY = (int)camera.getPosition().y / (scale * 2);
 		
-		for(int i = 0; i < view; i++)
+		for(int i = 0; i < viewX; i++)
 		{
-			for(int j = 0; j < view; j++)
+			for(int j = 0; j < viewY; j++)
 			{
 				Tile t = getTile(i - posX, j + posY);
 				
 				if(t != null)
 				{
-					render.renderTile(t, i - posX, -j - posY, shader, world, camera);
+					render.renderTile(t, i - posX - (viewX / 2) + 1, -j - posY + (viewY / 2), shader, world, camera);
 				}
 			}
 		}
@@ -144,6 +154,10 @@ public class World {
 	
 	public void setTile(Tile tile, int x, int y)
 	{
+		if((x + y * width) == 2079)
+		{
+			return; // Don't use this space.
+		}
 		tiles[x + y * width] = tile.getId(); //TODO: ERROR HERE
 		
 		if(tile.isSolid())

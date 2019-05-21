@@ -20,7 +20,7 @@ public class EntityPlayer {
 	private Texture texture;
 	private Transform transform;
 	
-	static float speed = 0.5f;
+	static float speed = 0.45f;
 	
 	public EntityPlayer()
 	{
@@ -42,7 +42,7 @@ public class EntityPlayer {
 		};
 		
 		model = new Model(vertices, texture, indices);
-		this.texture = new Texture("test2");
+		this.texture = new Texture("tiles");
 		
 		transform = new Transform();
 		transform.scale = new Vector3f(16, 16, 1);

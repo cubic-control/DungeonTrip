@@ -1,8 +1,10 @@
 package com.fuller.DungeonTrip;
 
+import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
+import org.lwjgl.glfw.GLFWWindowSizeCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 
@@ -11,6 +13,8 @@ public class Window {
 	protected int width, height;
 	protected String title;
 	protected boolean fullscreen;
+	protected boolean hasResized;
+	private GLFWWindowSizeCallback windowSizeCallback;
 	protected Input input;
 	
 	public static void setCallbacks()
@@ -18,11 +22,25 @@ public class Window {
 		GLFW.glfwSetErrorCallback(GLFWErrorCallback.createPrint(System.err));
 	}
 	
+	private void setLocalCallbacks()
+	{
+		windowSizeCallback = new GLFWWindowSizeCallback() {
+			@Override
+			public void invoke(long window, int newWidth, int newHeight) {
+				width = newWidth;
+				height = newHeight;
+				hasResized = true;
+			}
+		};
+		GLFW.glfwSetWindowSizeCallback(window, windowSizeCallback);
+	}
+	
 	public Window(int width, int height, String title)
 	{
 		setSize(width, height);
 		setFullscreen(false);
 		this.title = title;
+		hasResized = false;
 	}
 	
 	public void setSize(int width, int height)
@@ -63,6 +81,7 @@ public class Window {
 		GLFW.glfwShowWindow(window);
 		
 		input = new Input(window);
+		setLocalCallbacks();
 		
 		if(Refs.debug)
 		{
@@ -89,6 +108,11 @@ public class Window {
 		GLFW.glfwTerminate();
 	}
 	
+	public void cleanUp()
+	{
+		Callbacks.glfwFreeCallbacks(window);
+	}
+	
 	public boolean shouldClose()
 	{
 		return GLFW.glfwWindowShouldClose(window);
@@ -96,6 +120,7 @@ public class Window {
 	
 	public void update()
 	{
+		hasResized = false;
 		input.update();
 		GLFW.glfwPollEvents();
 	}
@@ -107,6 +132,8 @@ public class Window {
 	public int getHeight() {return height;}
 
 	public String getTitle() {return title;}
+	
+	public boolean hasResized() {return hasResized;}
 	
 	public boolean getFullScreen() {return fullscreen;}
 	

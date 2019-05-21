@@ -1,0 +1,152 @@
+package com.fuller.DungeonTrip.entities;
+
+import org.joml.Vector2f;
+import org.joml.Vector3f;
+import org.lwjgl.glfw.GLFW;
+
+import com.fuller.DungeonTrip.Refs;
+import com.fuller.DungeonTrip.Window;
+import com.fuller.DungeonTrip.collision.AABB;
+import com.fuller.DungeonTrip.collision.Collision;
+import com.fuller.DungeonTrip.render.Camera;
+import com.fuller.DungeonTrip.render.Model;
+import com.fuller.DungeonTrip.render.Shader;
+import com.fuller.DungeonTrip.render.Texture;
+import com.fuller.DungeonTrip.world.World;
+
+public class EntityPlayer {
+	private Model model;
+	private AABB bounding_box;
+	private Texture texture;
+	private Transform transform;
+	
+	static float speed = 0.5f;
+	
+	public EntityPlayer()
+	{
+		float[] vertices = new float[] {
+				-1f, 1f, 0,
+				1f, 1f, 0,
+				1f, -1f, 0,
+				-1f, -1f, 0
+		};
+		float[] texture = new float[] {
+				0, 0,
+				1, 0,
+				1, 1,
+				0, 1
+		};
+		int[] indices = new int[] {
+				0, 1, 2,
+				2, 3, 0
+		};
+		
+		model = new Model(vertices, texture, indices);
+		this.texture = new Texture("test2");
+		
+		transform = new Transform();
+		transform.scale = new Vector3f(16, 16, 1);
+		
+		bounding_box = new AABB(new Vector2f(transform.pos.x, transform.pos.y), new Vector2f(1, 1));
+	}
+	
+	public void update(float delta, Window window, Camera camera, World world)
+	{
+		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_A))
+		{
+			transform.pos.add(new Vector3f(-speed, 0, 0));
+		}
+		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_D))
+		{
+			transform.pos.add(new Vector3f(speed, 0, 0));
+		}
+		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_W))
+		{
+			transform.pos.add(new Vector3f(0, speed, 0));
+		}
+		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_S))
+		{
+			transform.pos.add(new Vector3f(0, -speed, 0));
+		}
+		
+		bounding_box.getCenter().set(transform.pos.x, transform.pos.y);
+		
+		AABB[] boxes = new AABB[25];
+		
+		for(int i = 0; i < 5; i++)
+		{
+			for(int j = 0; j < 5; j++)
+			{
+				boxes[i + j * 5] = world.getTileBoundingBox(
+						(int)(((transform.pos.x / 2) + 0.5f) - (5/2)) + i,
+						(int)(((-transform.pos.y / 2) + 0.5f) - (5/2) + j));
+			}
+		}
+		
+		AABB box = null;
+		
+		for(int i = 0; i < boxes.length; i++)
+		{
+			if(boxes[i] != null)
+			{
+				if(box == null) box = boxes[i];
+				
+				Vector2f length1 = box.getCenter().sub(transform.pos.x, transform.pos.y, new Vector2f());
+				Vector2f length2 = boxes[i].getCenter().sub(transform.pos.x, transform.pos.y, new Vector2f());
+				
+				if(length1.lengthSquared() > length2.lengthSquared())
+				{
+					box = boxes[i];
+				}
+			}
+		}
+		
+		if(box != null)
+		{
+			Collision data = bounding_box.getCollision(box);
+			
+			if(data.isIntersecting)
+			{
+				bounding_box.correctPosition(box, data);
+				transform.pos.set(bounding_box.getCenter(), 0);
+			}
+			
+			for(int i = 0; i < boxes.length; i++)
+			{
+				if(boxes[i] != null)
+				{
+					if(box == null) box = boxes[i];
+					
+					Vector2f length1 = box.getCenter().sub(transform.pos.x, transform.pos.y, new Vector2f());
+					Vector2f length2 = boxes[i].getCenter().sub(transform.pos.x, transform.pos.y, new Vector2f());
+					
+					if(length1.lengthSquared() > length2.lengthSquared())
+					{
+						box = boxes[i];
+					}
+				}
+			}
+			
+			data = bounding_box.getCollision(box);
+			
+			if(data.isIntersecting)
+			{
+				bounding_box.correctPosition(box, data);
+				transform.pos.set(bounding_box.getCenter(), 0);
+			}
+		}
+		
+		camera.getPosition().lerp(transform.pos.mul(-world.getScale(), new Vector3f()), 0.1f);
+		//camera.setPosition(transform.pos.mul(-world.getScale(), new Vector3f()));
+	}
+	
+	public void render(Shader shader, Camera camera)
+	{
+		shader.bind();
+		shader.setUniform("sampler", 0);
+		shader.setUniform("projection", transform.getProjection(camera.getProjection()));
+		texture.bind(0);
+		model.render();
+	}
+
+}

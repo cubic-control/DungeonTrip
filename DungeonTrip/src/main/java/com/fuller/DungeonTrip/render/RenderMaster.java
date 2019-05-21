@@ -5,7 +5,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.entities.EntityPlayer;
-import com.fuller.DungeonTrip.world.Tile;
 import com.fuller.DungeonTrip.world.TileRenderer;
 import com.fuller.DungeonTrip.world.World;
 
@@ -28,12 +27,7 @@ public class RenderMaster {
 		camera.setPosition(new Vector3f(0, 0, 0));
 		tiles = new TileRenderer();
 		world = new World("test");
-		world.setTile(Tile.test2, 5, 0);
-		world.setTile(Tile.test2, 6, 0);
-		world.setTile(Tile.test2, 7, 0);
-		world.setTile(Tile.test2, 7, 1);
-		world.setTile(Tile.test2, 7, 2);
-		world.setTile(Tile.test2, 63, 63);
+		world.calculateView(Refs.window);
 		player = new EntityPlayer();
 		
 		if(Refs.debug)
@@ -44,7 +38,7 @@ public class RenderMaster {
 	
 	public static void render()
 	{
-		world.render(tiles, shader, camera, Refs.window);
+		world.render(tiles, shader, camera);
 		player.render(shader, camera);
 	}
 

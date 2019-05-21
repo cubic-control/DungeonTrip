@@ -21,6 +21,11 @@ public class Texture {
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 
 		ByteBuffer data = STBImage.stbi_load(Refs.tex + filename + ".png", w, h, comp, 4);
+		
+		if(data == null)
+		{
+			throw new RuntimeException("Failed to load texrure file!" + System.lineSeparator() + STBImage.stbi_failure_reason());
+		}
 
 		id = GL11.glGenTextures();
 		width = w.get();

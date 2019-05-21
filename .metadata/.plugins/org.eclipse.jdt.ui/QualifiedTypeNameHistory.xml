@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="org.lwjgl.system.MemoryStack"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.GL15"/>
 <fullyQualifiedTypeName name="java.nio.IntBuffer"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -29,7 +28,6 @@
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Camera"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Shader"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Texture"/>
-<fullyQualifiedTypeName name="com.fuller.DungeonTrip.Refs"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.entities.EntityPlayer"/>
 <fullyQualifiedTypeName name="org.joml.Vector3f"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.collision.AABB"/>
@@ -48,4 +46,9 @@
 <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 <fullyQualifiedTypeName name="org.lwjgl.stb.STBImage"/>
 <fullyQualifiedTypeName name="java.nio.ByteBuffer"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.Refs"/>
+<fullyQualifiedTypeName name="org.joml.Vector4f"/>
+<fullyQualifiedTypeName name="org.lwjgl.glfw.GLFWWindowSizeCallback"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL15"/>
+<fullyQualifiedTypeName name="org.lwjgl.glfw.Callbacks"/>
 </qualifiedTypeNameHistroy>

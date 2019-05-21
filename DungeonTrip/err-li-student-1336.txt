@@ -1,0 +1,7 @@
+Exception in thread "main" java.lang.NullPointerException
+	at com.fuller.DungeonTrip.render.Texture.<init>(Texture.java:36)
+	at com.fuller.DungeonTrip.entities.EntityPlayer.<init>(EntityPlayer.java:45)
+	at com.fuller.DungeonTrip.render.RenderMaster.init(RenderMaster.java:31)
+	at com.fuller.DungeonTrip.GameLoop.init(GameLoop.java:56)
+	at com.fuller.DungeonTrip.GameLoop.run(GameLoop.java:45)
+	at com.fuller.DungeonTrip.App.main(App.java:52)

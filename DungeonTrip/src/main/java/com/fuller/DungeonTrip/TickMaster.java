@@ -1,6 +1,7 @@
 package com.fuller.DungeonTrip;
 
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL15;
 
 import com.fuller.DungeonTrip.render.RenderMaster;
 
@@ -31,6 +32,13 @@ public class TickMaster {
 		if(Refs.window.input.isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
 		{
 			System.out.println("click");
+		}
+		
+		if(Refs.window.hasResized())
+		{
+			RenderMaster.camera.setProjection(Refs.window.getWidth(), Refs.window.getHeight());
+			RenderMaster.world.calculateView(Refs.window);
+			GL15.glViewport(0, 0, Refs.window.getWidth(), Refs.window.getHeight());
 		}
 		RenderMaster.player.update(0, Refs.window, RenderMaster.camera, RenderMaster.world);
 		RenderMaster.world.correctCamera(RenderMaster.camera, Refs.window);

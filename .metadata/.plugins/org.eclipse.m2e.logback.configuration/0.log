@@ -2304,3 +2304,206 @@
 2019-05-20 10:20:26,311 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
 2019-05-20 10:20:26,318 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-20 10:20:26,328 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 07:56:37,075 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-21 08:20:01,476 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-05-21 08:24:03,719 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:24:03,739 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:24:03,779 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:24:03,780 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:27:25,467 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:27:25,513 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:27:25,523 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:27:25,523 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:29:10,524 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:29:10,536 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:29:10,549 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:29:10,550 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:40:32,680 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-21 08:41:14,849 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:41:14,877 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:41:14,900 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:41:14,901 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:42:01,959 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:42:02,010 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:42:02,019 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:42:02,019 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:46:22,364 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:23,274 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:46:23,312 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:23,312 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:46:46,495 [Worker-10: Launching Debug] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:46,511 [Worker-10: Launching Debug] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:46:46,527 [Worker-10: Launching Debug] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:46,600 [Worker-10: Launching Debug] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:46:46,831 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:46,832 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-05-21 08:46:46,836 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:46:47,004 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:48:08,020 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:48:08,031 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:48:08,044 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:48:08,064 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:52:52,974 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:52:52,987 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:52:53,027 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:52:53,028 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:53:15,693 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:53:15,705 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:53:15,725 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:53:15,739 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:54:00,403 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:54:00,413 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:54:00,435 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:54:00,436 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:54:27,957 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:54:27,974 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:54:27,986 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:54:28,001 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:55:40,348 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:55:40,374 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:55:40,399 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:55:40,399 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:55:55,799 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:55:55,812 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:55:55,825 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:55:55,838 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:56:57,905 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:56:57,936 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:56:57,960 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:56:57,979 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 08:57:10,380 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:57:10,396 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 08:57:10,408 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 08:57:10,422 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:02:37,688 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:02:37,704 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 09:02:37,824 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:02:37,843 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:03:52,917 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:03:52,928 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 09:03:52,953 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:03:52,955 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:04:10,527 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:04:10,538 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 09:04:10,548 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:04:10,559 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:06:58,284 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:06:58,304 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 09:06:58,331 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:06:58,332 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:10:23,856 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:10:23,871 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2019-05-21 09:10:23,884 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:10:23,914 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:16:21,191 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:16:21,206 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2019-05-21 09:16:21,245 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:16:21,246 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:17:15,237 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:17:15,251 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2019-05-21 09:17:15,262 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:17:15,277 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:26:23,732 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:26:23,746 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:26:23,868 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:26:23,869 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:27:27,619 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:27:27,647 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:27:27,670 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:27:27,683 [Worker-30: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:28:47,561 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:28:47,573 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:28:47,589 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:28:47,603 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:29:26,107 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:29:26,124 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:29:26,148 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:29:26,149 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:30:09,160 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:30:09,182 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:30:09,194 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:30:09,208 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:37:50,329 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:37:50,344 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:37:50,368 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:37:50,368 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:37:55,218 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:37:55,250 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2019-05-21 09:37:55,266 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:37:55,284 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:39:17,430 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:39:17,456 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2019-05-21 09:39:17,496 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:39:17,497 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:47:42,534 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:47:42,545 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:47:42,568 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:47:42,580 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:48:41,407 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:48:41,418 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:48:41,445 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:48:41,457 [Worker-41: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:48:42,566 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:48:42,576 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:48:42,590 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:48:42,601 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:50:14,169 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:50:14,181 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:50:14,222 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:50:14,237 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:50:39,388 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:50:39,400 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:50:39,414 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:50:39,427 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:51:37,882 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:51:37,893 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:51:37,918 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:51:37,919 [Worker-45: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:53:03,625 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:53:03,654 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:53:03,672 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:53:03,686 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 09:57:45,873 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:57:45,892 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 09:57:45,928 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 09:57:45,929 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:02:58,013 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:02:58,034 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:02:58,049 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:02:58,060 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:03:44,947 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:03:44,982 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:03:45,010 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:03:45,027 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:05:20,838 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:05:20,853 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:05:20,866 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:05:20,877 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:06:30,763 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:06:30,781 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:06:30,805 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:06:30,806 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:07:17,313 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:07:17,337 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:07:17,354 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:07:17,367 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:14:06,089 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:06,106 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:14:06,134 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:06,135 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:14:30,872 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:30,890 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:14:30,907 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:30,920 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:14:58,569 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:58,582 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:14:58,605 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:14:58,606 [Worker-50: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:17:27,278 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:17:27,289 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:17:27,301 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:17:27,313 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources
+2019-05-21 10:18:26,678 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:18:26,691 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2019-05-21 10:18:26,732 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-21 10:18:26,747 [Worker-55: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benjamin.fuller\OneDrive - Great Oaks Career Campuses\Root\Apps\Data\eclipse\workspaces\DanDGame\DungeonTrip\src\test\resources

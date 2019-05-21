@@ -4,8 +4,15 @@ public class Tile {
 	public static Tile tiles[] = new Tile[256];
 	public static byte not = 0;
 	
-	public static final Tile test_tile = new Tile("grass");
-	public static final Tile test2 = new Tile("test").setSolid();
+	public static final Tile plains = new Tile("plains");
+	public static final Tile sahara = new Tile("sahara");
+	public static final Tile tundra = new Tile("tundra");
+	public static final Tile hills = new Tile("hills");
+	public static final Tile dawn = new Tile("dawn");
+	public static final Tile white = new Tile("white");
+	// Convert above values to static array and init them later.
+		// Use this when adding DLC (Separate Package)
+	
 	
 	private byte id;
 	private boolean solid;
