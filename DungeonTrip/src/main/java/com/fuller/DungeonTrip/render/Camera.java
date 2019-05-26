@@ -3,7 +3,14 @@ package com.fuller.DungeonTrip.render;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
+<<<<<<< HEAD
 public class Camera {
+=======
+import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.Window;
+
+public class Camera extends BaseObject{
+>>>>>>> update
 	private Vector3f position;
 	private Matrix4f projection;
 	
@@ -35,4 +42,19 @@ public class Camera {
 		return projection.translate(position, new Matrix4f());
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public void update() {
+		if(Window.getInstance().hasResized())
+		{
+			this.setProjection(Window.getInstance().getWidth(), Window.getInstance().getHeight());
+		}
+	}
+
+	@Override
+	public void render() {
+	}
+
+>>>>>>> update
 }

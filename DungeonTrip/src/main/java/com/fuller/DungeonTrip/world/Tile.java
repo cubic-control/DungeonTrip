@@ -4,6 +4,10 @@ public class Tile {
 	public static Tile tiles[] = new Tile[256];
 	public static byte not = 0;
 	
+<<<<<<< HEAD
+=======
+	public static final Tile _NULL_ = new Tile("null").setSolid();
+>>>>>>> update
 	public static final Tile plains = new Tile("plains");
 	public static final Tile sahara = new Tile("sahara");
 	public static final Tile tundra = new Tile("tundra");

@@ -1,0 +1,39 @@
+-Further utilize BaseObject and MasterHelper.
+
+-Change Refs.res and other strings pointing to files (Current method only works within IDE).
+
+-Test on different monitors.
+
+-Create sound system.
+
+-Create guis.
+
+-Create invintory system.
+
+-Create fight system (Mash up of Undertale and Pokemon).
+
+-Create levels.
+
+-Create enemies.
+
+-Create items.
+
+-Create dialogue system.
+
+-Add player customization.
+
+-Add DLC system.
+
+-Remove unused libraries.
+
+-Touch up textures.
+
+-Create credits page.
+
+-Add security measures (Not necesary, seeing how all games get pirated, but might as well add some)
+
+-Publish.
+
+-Create a DLC.
+
+-Create more DLC (~5 or 6).

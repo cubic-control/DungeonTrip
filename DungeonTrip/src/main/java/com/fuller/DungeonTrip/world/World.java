@@ -10,13 +10,24 @@ import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.stb.STBImage;
 
+<<<<<<< HEAD
+=======
+import com.fuller.DungeonTrip.BaseObject;
+>>>>>>> update
 import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.render.Camera;
+<<<<<<< HEAD
 import com.fuller.DungeonTrip.render.Shader;
 
 public class World {
+=======
+import com.fuller.DungeonTrip.render.RenderMaster;
+import com.fuller.DungeonTrip.render.Shader;
+
+public class World extends BaseObject{
+>>>>>>> update
 	private int viewX, viewY;
 	private byte[] tiles;
 	private AABB[] bounding_boxes;
@@ -107,6 +118,14 @@ public class World {
 		viewY = (window.getHeight() / (scale * 2)) + 4;
 	}
 	
+<<<<<<< HEAD
+=======
+	public Matrix4f getWorldMatrix()
+	{
+		return world;
+	}
+	
+>>>>>>> update
 	public void render(TileRenderer render, Shader shader, Camera camera)
 	{
 		int posX = (int)camera.getPosition().x / (scale * 2);
@@ -116,7 +135,11 @@ public class World {
 		{
 			for(int j = 0; j < viewY; j++)
 			{
+<<<<<<< HEAD
 				Tile t = getTile(i - posX, j + posY);
+=======
+				Tile t = getTile(i - posX - (viewX / 2) + 1, j + posY - (viewY / 2));
+>>>>>>> update
 				
 				if(t != null)
 				{
@@ -156,6 +179,10 @@ public class World {
 	{
 		if((x + y * width) == 2079)
 		{
+<<<<<<< HEAD
+=======
+			System.out.println("Deadly Number Found: Ignoring.");
+>>>>>>> update
 			return; // Don't use this space.
 		}
 		tiles[x + y * width] = tile.getId(); //TODO: ERROR HERE
@@ -198,4 +225,20 @@ public class World {
 		return scale;
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public void update() {
+		if(Window.getInstance().hasResized())
+		{
+			this.calculateView(Window.getInstance());
+		}
+		this.correctCamera(RenderMaster.camera, Window.getInstance());
+	}
+
+	@Override
+	public void render() {
+	}
+
+>>>>>>> update
 }

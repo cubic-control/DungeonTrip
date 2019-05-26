@@ -1,0 +1,54 @@
+package com.fuller.DungeonTrip;
+
+import java.util.ArrayList;
+
+import org.lwjgl.opengl.GL15;
+
+import com.fuller.DungeonTrip.entities.EntityPlayer;
+import com.fuller.DungeonTrip.render.Camera;
+import com.fuller.DungeonTrip.render.RenderMaster;
+import com.fuller.DungeonTrip.world.World;
+
+public class MasterHelper {
+	
+	public static ArrayList<Object> objects = new ArrayList<Object>();
+	
+	public static void update()
+	{
+		if(Refs.window.hasResized())
+		{
+			for(Object object: objects)
+			{
+				if(object instanceof Camera)
+				{
+					((Camera)object).setProjection(Refs.window.getWidth(), Refs.window.getHeight());
+				}
+				
+				if(object instanceof World)
+				{
+					((World)object).calculateView(Refs.window);
+				}
+			}
+			GL15.glViewport(0, 0, Refs.window.getWidth(), Refs.window.getHeight());
+		}
+		
+		for(Object object: objects)
+		{
+			if(object instanceof EntityPlayer)
+			{
+				((EntityPlayer)object).update(0, Refs.window, RenderMaster.camera, RenderMaster.world);
+			}
+			
+			if(object instanceof World)
+			{
+				((World)object).correctCamera(RenderMaster.camera, Refs.window);
+			}
+		}
+	}
+	
+	public static void render()
+	{
+		
+	}
+
+}

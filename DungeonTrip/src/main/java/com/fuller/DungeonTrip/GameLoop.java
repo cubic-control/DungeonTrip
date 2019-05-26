@@ -3,6 +3,10 @@ package com.fuller.DungeonTrip;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 
+<<<<<<< HEAD
+=======
+import com.fuller.DungeonTrip.assets.Assets;
+>>>>>>> update
 import com.fuller.DungeonTrip.render.RenderMaster;
 
 public class GameLoop {
@@ -121,6 +125,11 @@ public class GameLoop {
 	            }
 			}
 		}
+<<<<<<< HEAD
+=======
+		Assets.deleteAsset();
+		MasterHelper.objects.clear();
+>>>>>>> update
 		window.destroy();
 	}
 	

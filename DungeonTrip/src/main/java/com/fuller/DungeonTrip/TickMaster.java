@@ -1,9 +1,12 @@
 package com.fuller.DungeonTrip;
 
 import org.lwjgl.glfw.GLFW;
+<<<<<<< HEAD
 import org.lwjgl.opengl.GL15;
 
 import com.fuller.DungeonTrip.render.RenderMaster;
+=======
+>>>>>>> update
 
 public class TickMaster {
 	
@@ -21,6 +24,7 @@ public class TickMaster {
 	
 	public static void tick()
 	{
+<<<<<<< HEAD
 		if(Refs.window.input.isKeyDown(GLFW.GLFW_KEY_ESCAPE))
 		{
 			Refs.window.close();
@@ -42,6 +46,21 @@ public class TickMaster {
 		}
 		RenderMaster.player.update(0, Refs.window, RenderMaster.camera, RenderMaster.world);
 		RenderMaster.world.correctCamera(RenderMaster.camera, Refs.window);
+=======
+		if(Window.getInstance().input.isKeyDown(GLFW.GLFW_KEY_ESCAPE))
+		{
+			Window.getInstance().close();
+		}
+		if(Window.getInstance().input.isKeyPressed(GLFW.GLFW_KEY_SPACE))
+		{
+			System.out.println("Space Print");
+		}
+		if(Window.getInstance().input.isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
+		{
+			System.out.println("click");
+		}
+		MasterHelper.update();
+>>>>>>> update
 	}
 
 }

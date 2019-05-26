@@ -21,6 +21,7 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.world.TileRenderer"/>
 <fullyQualifiedTypeName name="org.joml.Matrix4f"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.world.World"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.RenderMaster"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.world.Tile"/>
@@ -37,6 +38,15 @@
 <fullyQualifiedTypeName name="java.util.logging.SimpleFormatter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+=======
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.RenderMaster"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.world.Tile"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Texture"/>
+<fullyQualifiedTypeName name="org.joml.Vector3f"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.util.logging.SimpleFormatter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+>>>>>>> update
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -51,4 +61,22 @@
 <fullyQualifiedTypeName name="org.lwjgl.glfw.GLFWWindowSizeCallback"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL15"/>
 <fullyQualifiedTypeName name="org.lwjgl.glfw.Callbacks"/>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.collision.AABB"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.Input"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.collision.Collision"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Shader"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Model"/>
+<fullyQualifiedTypeName name="org.joml.Vector2f"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.TileSheet"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.assets.Assets"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.Camera"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.world.World"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.entities.EntityPlayer"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.MasterHelper"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.BaseObject"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.Window"/>
+>>>>>>> update
 </qualifiedTypeNameHistroy>

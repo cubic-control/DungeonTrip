@@ -1,0 +1,29 @@
+package com.fuller.DungeonTrip;
+
+import java.util.ArrayList;
+
+import org.lwjgl.opengl.GL15;
+
+public class MasterHelper {
+	
+	public static ArrayList<BaseObject> objects = new ArrayList<BaseObject>();
+	
+	public static void update()
+	{
+		for(BaseObject object: objects)
+		{
+			object.update();
+		}
+		
+		if(Refs.window.hasResized())
+		{
+			GL15.glViewport(0, 0, Refs.window.getWidth(), Refs.window.getHeight());
+		}
+	}
+	
+	public static void render()
+	{
+		
+	}
+
+}

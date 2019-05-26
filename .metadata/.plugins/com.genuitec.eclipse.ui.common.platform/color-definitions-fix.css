@@ -1734,6 +1734,7 @@ IEclipsePreferences#org-eclipse-e4-CSS {
 		'org.eclipse.e4.CSS.syntaxColorer.tokenStyles.string.color=255,198,0'
 		'org.eclipse.e4.CSS.syntaxColorer.tokenStyles.ClassID.color=255,255,255'
 }
+<<<<<<< HEAD
 IEclipsePreferences#org-eclipse-emf-mwe2-language-ui {
 	preferences:
 		'syntaxColorer.deprecated_element.color=165,30,52'
@@ -1744,6 +1745,8 @@ IEclipsePreferences#org-eclipse-emf-mwe2-language-ui {
 		'syntaxColorer.string_prop_ref.color=167,236,33'
 		'syntaxColorer.string_prop_ref.style=1'
 }
+=======
+>>>>>>> update
 IEclipsePreferences#org-eclipse-epp-mpc-ui {
 	preferences:
 		'native-borders=false'
@@ -1923,6 +1926,7 @@ IEclipsePreferences#org-eclipse-mylyn-wikitext-ui {
 }
 IEclipsePreferences#org-eclipse-pde-ui {
 	preferences:
+<<<<<<< HEAD
 		'editor.color.default=216,216,216'
 		'editor.color.externalized_string=255,198,0'
 		'editor.color.externalized_string_italic=true'
@@ -1941,6 +1945,19 @@ IEclipsePreferences#org-eclipse-pde-ui {
 		'editor.color.tag=121,171,255'
 		'editor.color.tag_bold=true'
 		'editor.color.xml_comment=199,221,12'
+=======
+		'editor.color.header_assignment=216,216,216'
+		'editor.color.externalized_string=255,198,0'
+		'editor.color.instr=255,255,255'
+		'editor.color.string=255,198,0'
+		'editor.color.tag=121,171,255'
+		'editor.color.header_osgi=141,203,226'
+		'editor.color.default=216,216,216'
+		'editor.color.header_key=141,203,226'
+		'editor.color.header_attributes=121,171,255'
+		'editor.color.xml_comment=199,221,12'
+		'editor.color.header_value=255,198,0'
+>>>>>>> update
 }
 IEclipsePreferences#org-eclipse-php-ui {
 	preferences:
@@ -2206,12 +2223,17 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.mylyn.tasks.ui.colors.foreground.today.completed=92,146,110'
 		'org.eclipse.mylyn.tasks.ui.colors.foreground.today.scheduled=50,97,159'
 		'org.eclipse.mylyn.tasks.ui.colors.incoming.background=11,13,14'
+<<<<<<< HEAD
 		'org.eclipse.pde.genericeditor.extension.editor.color.attribute=196,138,114'
 		'org.eclipse.pde.genericeditor.extension.editor.color.comment=93,134,75'
 		'org.eclipse.pde.genericeditor.extension.editor.color.header=115,130,140'
 		'org.eclipse.pde.genericeditor.extension.editor.color.quote=118,200,244'
 		'org.eclipse.pde.genericeditor.extension.editor.color.tag=86,156,214'
 		'org.eclipse.pde.genericeditor.extension.editor.color.text=207,212,216'
+=======
+		'org.eclipse.recommenders.snipmatch.rcp.searchResultBackgroundColor=0,0,0'
+		'org.eclipse.recommenders.snipmatch.rcp.searchboxbackground=11,13,14'
+>>>>>>> update
 		'org.eclipse.search.ui.match.highlight=73,83,90'
 		'org.eclipse.ui.editors.backgroundColor=0,0,0'
 		'org.eclipse.ui.editors.currentLineColor=7,8,8'
@@ -2373,6 +2395,7 @@ IEclipsePreferences#org-eclipse-xtend-core-Xtend {
 		'org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xbase.static.method.invocation.color=190,214,255'
 		'org.eclipse.xtend.core.Xtend.syntaxColorer.tokenStyles.xtend.richText.bgColor=39,44,48'
 }
+<<<<<<< HEAD
 IEclipsePreferences#org-eclipse-xtend-ide {
 	preferences:
 		'syntaxColorer.xtend.active.annotation.color=165,46,0'
@@ -2415,6 +2438,8 @@ IEclipsePreferences#org-eclipse-xtext-xtext-ui {
 		'syntaxColorer.TypeReference.style=2'
 		'syntaxColorer.UnusedValue.color=115,130,140'
 }
+=======
+>>>>>>> update
 IEclipsePreferences#org-epic-perleditor {
 	preferences:
 		'taskIndicationColorBold=false'

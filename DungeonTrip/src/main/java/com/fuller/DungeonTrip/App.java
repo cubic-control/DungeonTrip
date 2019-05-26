@@ -47,7 +47,10 @@ public class App
         }
         
         window.init();
+<<<<<<< HEAD
         Refs.window = window;
+=======
+>>>>>>> update
         
         loop.run(window);
     }

@@ -4,7 +4,12 @@ configurationInstallLocation=/C\:/Users/benjamin.fuller/OneDrive - Great Oaks Ca
 eclipse.preferences.version=1
 elearning.dont.show.until=1558368769962
 iconcolormode=primary
+<<<<<<< HEAD
 last.download.attempt.time=1558442432579
 lastConfiguration=1558442235289
+=======
+last.download.attempt.time=1558831933619
+lastConfiguration=1558831746352
+>>>>>>> update
 newinstall=true
 workbench.theme=Dark Gray

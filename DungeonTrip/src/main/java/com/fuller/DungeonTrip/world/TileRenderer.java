@@ -14,6 +14,11 @@ public class TileRenderer {
 	private HashMap<String, Texture> tile_textures;
 	private Model model;
 	
+<<<<<<< HEAD
+=======
+	private static TileRenderer instance;
+	
+>>>>>>> update
 	public TileRenderer()
 	{
 		tile_textures = new HashMap<String, Texture>();
@@ -69,5 +74,18 @@ public class TileRenderer {
 		
 		model.render();
 	}
+<<<<<<< HEAD
+=======
+	
+	public static void createRender()
+	{
+		instance = new TileRenderer();
+	}
+	
+	public static TileRenderer getInstance()
+	{
+		return instance;
+	}
+>>>>>>> update
 
 }
