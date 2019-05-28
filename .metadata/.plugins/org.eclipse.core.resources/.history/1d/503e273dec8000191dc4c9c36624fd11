@@ -1,0 +1,27 @@
+package com.fuller.DungeonTrip;
+
+import java.net.URISyntaxException;
+import java.net.URL;
+
+public class Refs {
+	public static final String tex = "/assets/textures/";
+	public static final String snd = "/assets/sounds/";
+	public static boolean debug = false;
+	public static boolean dev = false;
+	
+	public static String getFile(String texture)
+	{
+		URL url = Refs.class.getResource(texture);
+		
+		try
+		{
+			System.out.println(url.toURI().getPath());
+			return url.toURI().getPath();
+		}
+		catch(URISyntaxException e)
+		{
+			throw new RuntimeException("URI Failure");
+		}
+	}
+
+}

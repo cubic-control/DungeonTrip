@@ -20,11 +20,11 @@ public class Texture {
 		IntBuffer h = BufferUtils.createIntBuffer(1);
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 
-		ByteBuffer data = STBImage.stbi_load(Refs.tex + filename + ".png", w, h, comp, 4);
+		ByteBuffer data = STBImage.stbi_load(Refs.getFile(Refs.tex + filename + ".png"), w, h, comp, 4);
 		
 		if(data == null)
 		{
-			throw new RuntimeException("Failed to load texrure file!" + System.lineSeparator() + STBImage.stbi_failure_reason());
+			throw new RuntimeException("Failed to load texture file!" + System.lineSeparator() + STBImage.stbi_failure_reason());
 		}
 
 		id = GL11.glGenTextures();

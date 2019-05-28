@@ -120,7 +120,7 @@ public class Shader {
 		
 		try
 		{
-			br = new BufferedReader(new FileReader(new File(Refs.res + "shaders/" + filename)));
+			br = new BufferedReader(new FileReader(new File(Refs.getFile("shaders/" + filename))));
 			String line;
 			
 			while((line = br.readLine()) != null)

@@ -10,24 +10,15 @@ import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.stb.STBImage;
 
-<<<<<<< HEAD
-=======
 import com.fuller.DungeonTrip.BaseObject;
->>>>>>> update
 import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.render.Camera;
-<<<<<<< HEAD
-import com.fuller.DungeonTrip.render.Shader;
-
-public class World {
-=======
 import com.fuller.DungeonTrip.render.RenderMaster;
 import com.fuller.DungeonTrip.render.Shader;
 
 public class World extends BaseObject{
->>>>>>> update
 	private int viewX, viewY;
 	private byte[] tiles;
 	private AABB[] bounding_boxes;
@@ -56,7 +47,7 @@ public class World extends BaseObject{
 		IntBuffer h = BufferUtils.createIntBuffer(1);
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 		
-		ByteBuffer tile_sheet = STBImage.stbi_load(Refs.res + "assets/levels/" + world + "_tiles.png", w, h, comp, 4);
+		ByteBuffer tile_sheet = STBImage.stbi_load(Refs.getFile("assets/levels/" + world + "_tiles.png"), w, h, comp, 4);
 		
 		if(tile_sheet == null)
 		{
@@ -78,7 +69,6 @@ public class World extends BaseObject{
 			for(int x = 0; x < width; x++)
 			{
 				int red = (tile_sheet.get((x + y * width) * 4)) & 0xFF;
-				System.out.println(red);
 				Tile t;
 				
 				try
@@ -118,14 +108,11 @@ public class World extends BaseObject{
 		viewY = (window.getHeight() / (scale * 2)) + 4;
 	}
 	
-<<<<<<< HEAD
-=======
 	public Matrix4f getWorldMatrix()
 	{
 		return world;
 	}
 	
->>>>>>> update
 	public void render(TileRenderer render, Shader shader, Camera camera)
 	{
 		int posX = (int)camera.getPosition().x / (scale * 2);
@@ -135,11 +122,7 @@ public class World extends BaseObject{
 		{
 			for(int j = 0; j < viewY; j++)
 			{
-<<<<<<< HEAD
-				Tile t = getTile(i - posX, j + posY);
-=======
 				Tile t = getTile(i - posX - (viewX / 2) + 1, j + posY - (viewY / 2));
->>>>>>> update
 				
 				if(t != null)
 				{
@@ -179,10 +162,7 @@ public class World extends BaseObject{
 	{
 		if((x + y * width) == 2079)
 		{
-<<<<<<< HEAD
-=======
 			System.out.println("Deadly Number Found: Ignoring.");
->>>>>>> update
 			return; // Don't use this space.
 		}
 		tiles[x + y * width] = tile.getId(); //TODO: ERROR HERE
@@ -225,8 +205,6 @@ public class World extends BaseObject{
 		return scale;
 	}
 
-<<<<<<< HEAD
-=======
 	@Override
 	public void update() {
 		if(Window.getInstance().hasResized())
@@ -239,6 +217,4 @@ public class World extends BaseObject{
 	@Override
 	public void render() {
 	}
-
->>>>>>> update
 }

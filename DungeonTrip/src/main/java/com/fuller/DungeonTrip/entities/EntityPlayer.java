@@ -4,29 +4,18 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
-<<<<<<< HEAD
-import com.fuller.DungeonTrip.Refs;
-=======
 import com.fuller.DungeonTrip.BaseObject;
->>>>>>> update
 import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.collision.Collision;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.Model;
-<<<<<<< HEAD
-=======
 import com.fuller.DungeonTrip.render.RenderMaster;
->>>>>>> update
 import com.fuller.DungeonTrip.render.Shader;
 import com.fuller.DungeonTrip.render.Texture;
 import com.fuller.DungeonTrip.world.World;
 
-<<<<<<< HEAD
-public class EntityPlayer {
-=======
 public class EntityPlayer extends BaseObject{
->>>>>>> update
 	private Model model;
 	private AABB bounding_box;
 	private Texture texture;
@@ -58,31 +47,13 @@ public class EntityPlayer extends BaseObject{
 		
 		transform = new Transform();
 		transform.scale = new Vector3f(16, 16, 1);
-<<<<<<< HEAD
-=======
 		transform.pos = new Vector3f(10, -10, 0);
->>>>>>> update
 		
 		bounding_box = new AABB(new Vector2f(transform.pos.x, transform.pos.y), new Vector2f(1, 1));
 	}
 	
 	public void update(float delta, Window window, Camera camera, World world)
 	{
-<<<<<<< HEAD
-		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_A))
-		{
-			transform.pos.add(new Vector3f(-speed, 0, 0));
-		}
-		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_D))
-		{
-			transform.pos.add(new Vector3f(speed, 0, 0));
-		}
-		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_W))
-		{
-			transform.pos.add(new Vector3f(0, speed, 0));
-		}
-		if(Refs.window.getInput().isKeyDown(GLFW.GLFW_KEY_S))
-=======
 		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_A))
 		{
 			transform.pos.add(new Vector3f(-speed, 0, 0));
@@ -96,7 +67,6 @@ public class EntityPlayer extends BaseObject{
 			transform.pos.add(new Vector3f(0, speed, 0));
 		}
 		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_S))
->>>>>>> update
 		{
 			transform.pos.add(new Vector3f(0, -speed, 0));
 		}
@@ -181,8 +151,6 @@ public class EntityPlayer extends BaseObject{
 		model.render();
 	}
 
-<<<<<<< HEAD
-=======
 	@Override
 	public void update() {
 		this.update(0, Window.getInstance(), RenderMaster.camera, RenderMaster.world);
@@ -191,6 +159,4 @@ public class EntityPlayer extends BaseObject{
 	@Override
 	public void render() {
 	}
-
->>>>>>> update
 }

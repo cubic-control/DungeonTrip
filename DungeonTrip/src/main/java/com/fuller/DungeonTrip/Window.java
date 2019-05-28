@@ -8,11 +8,8 @@ import org.lwjgl.glfw.GLFWWindowSizeCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 
-<<<<<<< HEAD
-=======
 import com.fuller.DungeonTrip.io.Input;
 
->>>>>>> update
 public class Window {
 	protected long window;
 	protected int width, height;
@@ -22,11 +19,8 @@ public class Window {
 	private GLFWWindowSizeCallback windowSizeCallback;
 	protected Input input;
 	
-<<<<<<< HEAD
-=======
 	private static Window instance;
 	
->>>>>>> update
 	public static void setCallbacks()
 	{
 		GLFW.glfwSetErrorCallback(GLFWErrorCallback.createPrint(System.err));
@@ -93,11 +87,8 @@ public class Window {
 		input = new Input(window);
 		setLocalCallbacks();
 		
-<<<<<<< HEAD
-=======
 		instance = this;
 		
->>>>>>> update
 		if(Refs.debug)
 		{
 			System.out.println("Window Init End.");
@@ -156,9 +147,5 @@ public class Window {
 	
 	public Input getInput() {return input;}
 	
-<<<<<<< HEAD
-=======
 	public static Window getInstance() {return instance;}
-	
->>>>>>> update
 }

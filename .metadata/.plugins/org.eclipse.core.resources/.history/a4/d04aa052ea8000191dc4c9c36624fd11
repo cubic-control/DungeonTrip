@@ -1,0 +1,27 @@
+package com.fuller.DungeonTrip;
+
+import java.io.File;
+import java.net.URL;
+
+public class Refs {
+	public static final String tex = "assets/textures/";
+	public static final String snd = "assets/sounds/";
+	public static boolean debug = false;
+	public static boolean dev = false;
+	
+	public static String getFile(String path)
+	{
+		URL url = Refs.class.getResource(path);
+		File directory = new File(url.getFile());
+		
+		if(directory.exists())
+		{
+			System.out.println("Running outside jar.");
+		}
+		else
+		{
+			System.out.println("Running inside jar.");
+		}
+	}
+
+}

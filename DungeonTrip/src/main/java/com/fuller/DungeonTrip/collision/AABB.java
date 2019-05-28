@@ -22,8 +22,6 @@ public class AABB {
 		return new Collision(distance, distance.x < 0 && distance.y < 0);
 	}
 	
-<<<<<<< HEAD
-=======
 	public Collision getCollision(Vector2f point)
 	{
 		Vector2f distance = point.sub(center);
@@ -35,7 +33,6 @@ public class AABB {
 		return new Collision(distance, distance.x < 0 && distance.y < 0);
 	}
 	
->>>>>>> update
 	public void correctPosition(AABB box2, Collision data)
 	{
 		Vector2f correction = box2.center.sub(center, new Vector2f());
@@ -66,10 +63,6 @@ public class AABB {
 
 	public Vector2f getCenter() {return center;}
 
-<<<<<<< HEAD
-	public Vector2f getHalf_extent() {return half_extent;}
-=======
 	public Vector2f getHalfExtent() {return half_extent;}
->>>>>>> update
 
 }
