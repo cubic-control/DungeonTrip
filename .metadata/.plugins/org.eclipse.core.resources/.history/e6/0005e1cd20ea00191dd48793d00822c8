@@ -1,0 +1,16 @@
+package com.fuller.DungeonTrip.utils;
+
+import java.io.InputStream;
+import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
+
+public class IOUtil {
+	
+	public static ByteBuffer loadImage(String fileName, IntBuffer w, IntBuffer h, IntBuffer comp)
+	{
+		ByteBuffer image;
+		
+		InputStream imageFile = IOUtils.class.getResourceAsStream(fileName);
+	}
+
+}

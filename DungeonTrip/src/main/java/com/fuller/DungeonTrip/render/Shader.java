@@ -1,9 +1,9 @@
 package com.fuller.DungeonTrip.render;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.FloatBuffer;
 
 import org.joml.Matrix4f;
@@ -12,6 +12,7 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL20;
 
 import com.fuller.DungeonTrip.Refs;
+import com.fuller.DungeonTrip.utils.RUtils;
 
 public class Shader {
 	private int program;
@@ -21,6 +22,10 @@ public class Shader {
 	
 	public Shader(String filename)
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Shader Init.");
+		}
 		theBuffer = BufferUtils.createFloatBuffer(16);
 		program = GL20.glCreateProgram();
 		
@@ -120,7 +125,8 @@ public class Shader {
 		
 		try
 		{
-			br = new BufferedReader(new FileReader(new File(Refs.getFile("shaders/" + filename))));
+			InputStream is = RUtils.class.getResourceAsStream("/shaders/" + filename);
+			br = new BufferedReader(new InputStreamReader(is));
 			String line;
 			
 			while((line = br.readLine()) != null)
@@ -129,6 +135,7 @@ public class Shader {
 				string.append("\n");
 			}
 			br.close();
+			is.close();
 		}
 		catch(IOException e)
 		{

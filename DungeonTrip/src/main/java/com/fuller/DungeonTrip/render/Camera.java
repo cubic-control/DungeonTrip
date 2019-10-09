@@ -4,6 +4,7 @@ import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
 import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.Window;
 
 public class Camera extends BaseObject{
@@ -12,6 +13,10 @@ public class Camera extends BaseObject{
 	
 	public Camera(int width, int height)
 	{
+		if(Refs.debug)
+		{
+			System.out.println("Camera Init.");
+		}
 		position = new Vector3f(0, 0, 0);
 		setProjection(width, height);
 	}

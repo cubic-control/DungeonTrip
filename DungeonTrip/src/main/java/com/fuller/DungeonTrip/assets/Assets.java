@@ -1,5 +1,6 @@
 package com.fuller.DungeonTrip.assets;
 
+import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.render.Model;
 
 public class Assets {
@@ -8,6 +9,10 @@ public class Assets {
 	public static Model getModel() { return model; }
 	
 	public static void initAsset() {
+		if(Refs.debug)
+		{
+			System.out.println("Assets: initAsset");
+		}
 		float[] vertices = new float[] {
 				-1f, 1f, 0, //TOP LEFT     0
 				1f, 1f, 0,  //TOP RIGHT    1

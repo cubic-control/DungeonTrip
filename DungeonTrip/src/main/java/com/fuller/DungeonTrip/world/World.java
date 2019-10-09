@@ -17,6 +17,7 @@ import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.RenderMaster;
 import com.fuller.DungeonTrip.render.Shader;
+import com.fuller.DungeonTrip.utils.RUtils;
 
 public class World extends BaseObject{
 	private int viewX, viewY;
@@ -29,6 +30,11 @@ public class World extends BaseObject{
 	
 	public World(String world)
 	{
+		if(Refs.debug)
+		{
+			System.out.println("World Init.");
+		}
+		
 		try {
 			tileSheet(world);
 		} catch (IOException e) {
@@ -47,7 +53,7 @@ public class World extends BaseObject{
 		IntBuffer h = BufferUtils.createIntBuffer(1);
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 		
-		ByteBuffer tile_sheet = STBImage.stbi_load(Refs.getFile("assets/levels/" + world + "_tiles.png"), w, h, comp, 4);
+		ByteBuffer tile_sheet = RUtils.loadImage(Refs.lvl + world + "_tiles.png", w, h, comp, 4);
 		
 		if(tile_sheet == null)
 		{

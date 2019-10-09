@@ -1,5 +1,6 @@
 package com.fuller.DungeonTrip.render;
 
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
@@ -8,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.stb.STBImage;
 
-import com.fuller.DungeonTrip.Refs;
+import com.fuller.DungeonTrip.utils.RUtils;
 
 public class Texture {
 	private int id;
@@ -20,7 +21,18 @@ public class Texture {
 		IntBuffer h = BufferUtils.createIntBuffer(1);
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 
-		ByteBuffer data = STBImage.stbi_load(Refs.getFile(Refs.tex + filename + ".png"), w, h, comp, 4);
+		String file = /*Refs.tex +*/ "/assets/textures/" + filename + ".png";
+		
+		ByteBuffer data = null;
+		
+		try
+		{
+			data = RUtils.loadImage(file, w, h, comp, 4);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
 		
 		if(data == null)
 		{

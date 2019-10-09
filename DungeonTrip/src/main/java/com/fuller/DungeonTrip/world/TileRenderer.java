@@ -5,6 +5,8 @@ import java.util.HashMap;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 
+import com.fuller.DungeonTrip.Refs;
+import com.fuller.DungeonTrip.assets.Assets;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.Model;
 import com.fuller.DungeonTrip.render.Shader;
@@ -18,26 +20,13 @@ public class TileRenderer {
 	
 	public TileRenderer()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("TileRenderer Init.");
+		}
 		tile_textures = new HashMap<String, Texture>();
 		
-		float[] vertices = new float[] {
-				-1f, 1f, 0,
-				1f, 1f, 0,
-				1f, -1f, 0,
-				-1f, -1f, 0
-		};
-		float[] texture = new float[] {
-				0, 0,
-				1, 0,
-				1, 1,
-				0, 1
-		};
-		int[] indices = new int[] {
-				0, 1, 2,
-				2, 3, 0
-		};
-		
-		model = new Model(vertices, texture, indices);
+		model = Assets.getModel();
 		
 		for(int i = 0; i < Tile.tiles.length; i++)
 		{
@@ -74,6 +63,10 @@ public class TileRenderer {
 	
 	public static void createRender()
 	{
+		if(Refs.debug)
+		{
+			System.out.println("TileRenderer: createRender");
+		}
 		instance = new TileRenderer();
 	}
 	

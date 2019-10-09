@@ -31,8 +31,8 @@ public class RenderMaster {
 		MasterHelper.objects.add(camera);
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		
-		TileRenderer.createRender();
 		Assets.initAsset();
+		TileRenderer.createRender();
 		
 		shader = new Shader("shader");
 		world = new World("exampleLevel2");

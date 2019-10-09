@@ -1,0 +1,33 @@
+package com.fuller.DungeonTrip.utils;
+
+import java.io.InputStream;
+import java.nio.ByteBuffer;
+import java.nio.IntBuffer;
+
+import org.lwjgl.BufferUtils;
+import org.lwjgl.stb.STBImage;
+
+public class IOUtils {
+	
+	public static ByteBuffer loadImage(String fileName, IntBuffer w, IntBuffer h, IntBuffer comp)
+	{
+		ByteBuffer image;
+		
+		InputStream imageFile = IOUtils.class.getResourceAsStream(fileName);
+		
+		byte[] imageData = new byte[];
+		imageFile.read(imageData);
+		
+		ByteBuffer imageBuffer = BufferUtils.createByteBuffer(imageData.length);
+		imageBuffer.put(imageData);
+		imageBuffer.flip();
+		
+		image = STBImage.stbi_load_from_memory(imageBuffer, w, h, comp, 4);
+		
+		if(image == null)
+		{
+			throw new RuntimeException("Failed to load image: " + fileName  + System.lineSeparator() + STBImage.stbi_failure_reason());
+		}
+	}
+
+}
