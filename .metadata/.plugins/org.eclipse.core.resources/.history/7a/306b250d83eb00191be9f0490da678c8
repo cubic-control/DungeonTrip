@@ -1,0 +1,66 @@
+package com.fuller.DungeonTrip.gui;
+
+import java.util.ArrayList;
+
+import org.joml.Vector2f;
+
+import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.io.Input;
+import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.render.Camera;
+import com.fuller.DungeonTrip.render.Shader;
+import com.fuller.DungeonTrip.render.TileSheet;
+
+public class Gui extends BaseObject{
+	private Shader shader;
+	private Camera camera;
+	private TileSheet sheet;
+	
+	public static ArrayList<GuiButton> buttons;
+	
+	public Gui(Window window) {
+		shader = new Shader("gui");
+		camera = new Camera(window.getWidth(), window.getHeight());
+		sheet = new TileSheet("gui", 9);
+		
+		buttons = new ArrayList<GuiButton>();
+		
+		GuiButtonEvent temporary = new GuiButtonEvent(new Vector2f(-132, -132), new Vector2f(16, 16), "Temporary");
+		//GuiButtonEvent temporary2 = new GuiButtonEvent(new Vector2f(132, 132), new Vector2f(64, 64), "Temporary2");
+		
+		buttons.add(temporary);
+		//buttons.add(temporary2);
+	}
+	
+	public void resizeCamera(Window window) {
+		camera.setProjection(window.getWidth(), window.getHeight());
+	}
+	
+	public void update(Input input) {
+		if(!buttons.isEmpty())
+		{
+			for(GuiButton button:buttons)
+			{
+				button.update(input);
+			}
+		}
+	}
+	
+	public void render() {
+		shader.bind();
+		
+		for(GuiButton button:buttons)
+		{
+			button.render(camera, sheet, shader);
+		}
+	}
+
+	@Override
+	public void update() {
+		if(Window.getInstance().hasResized())
+		{
+			resizeCamera(Window.getInstance());
+		}
+		update(Window.getInstance().getInput());
+	}
+}

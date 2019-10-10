@@ -28,7 +28,7 @@ public class Camera extends BaseObject{
 	
 	public void setPosition(Vector3f position)
 	{
-		this.position = position;
+		this.position.set(position);
 	}
 	
 	public void addPosition(Vector3f position)
@@ -37,6 +37,8 @@ public class Camera extends BaseObject{
 	}
 	
 	public Vector3f getPosition() {return position;}
+	
+	public Matrix4f getUntransformedProjection() {return projection;}
 	
 	public Matrix4f getProjection()
 	{

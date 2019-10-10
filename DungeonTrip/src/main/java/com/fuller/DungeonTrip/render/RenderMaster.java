@@ -7,6 +7,7 @@ import com.fuller.DungeonTrip.MasterHelper;
 import com.fuller.DungeonTrip.Refs;
 import com.fuller.DungeonTrip.assets.Assets;
 import com.fuller.DungeonTrip.entities.EntityPlayer;
+import com.fuller.DungeonTrip.gui.Gui;
 import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.world.TileRenderer;
 import com.fuller.DungeonTrip.world.World;
@@ -16,6 +17,7 @@ public class RenderMaster {
 	public static Camera camera;
 	public static World world;
 	public static EntityPlayer player;
+	public static Gui gui;
 	
 	public static void init()
 	{
@@ -28,7 +30,7 @@ public class RenderMaster {
 		
 		camera = new Camera(640, 480);
 		camera.setPosition(new Vector3f(0, 0, 0));
-		MasterHelper.objects.add(camera);
+		MasterHelper.addObject(camera);
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		
 		Assets.initAsset();
@@ -37,9 +39,12 @@ public class RenderMaster {
 		shader = new Shader("shader");
 		world = new World("exampleLevel2");
 		world.calculateView(Window.getInstance());
-		MasterHelper.objects.add(world);
+		MasterHelper.addObject(world);
 		player = new EntityPlayer();
-		MasterHelper.objects.add(player);
+		MasterHelper.addObject(player);
+		
+		gui = new Gui(Window.getInstance());
+		MasterHelper.addObject(gui);
 		
 		if(Refs.debug)
 		{

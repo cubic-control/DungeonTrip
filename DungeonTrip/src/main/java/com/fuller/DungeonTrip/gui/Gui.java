@@ -1,31 +1,48 @@
 package com.fuller.DungeonTrip.gui;
 
+import java.util.ArrayList;
+
 import org.joml.Vector2f;
 
 import com.fuller.DungeonTrip.BaseObject;
-import com.fuller.DungeonTrip.Refs;
-import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.io.Input;
+import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.Shader;
 import com.fuller.DungeonTrip.render.TileSheet;
+import com.fuller.DungeonTrip.utils.ScalableVector2f;
 
 public class Gui extends BaseObject{
 	private Shader shader;
 	private Camera camera;
 	private TileSheet sheet;
 	
-	private GuiButton temporary;
+	public static ArrayList<GuiButton> buttons;
 	
 	public Gui(Window window) {
-		if(Refs.debug)
-		{
-			System.out.println("Gui Init.");
-		}
 		shader = new Shader("gui");
 		camera = new Camera(window.getWidth(), window.getHeight());
 		sheet = new TileSheet("gui", 9);
-		temporary = new GuiButton(new Vector2f(-32, -32), new Vector2f(96, 96));
+		
+		buttons = new ArrayList<GuiButton>();
+		
+		GuiButtonEvent temporary = new GuiButtonEvent(ScalableVector2f.scalableV2f(new Vector2f(-224, -208)), new Vector2f(64, 32), "Temporary");
+		GuiButtonEvent temporary2 = new GuiButtonEvent(new Vector2f(-112, -208), new Vector2f(64, 32), "Temporary2");
+		GuiButtonEvent temporary3 = new GuiButtonEvent(new Vector2f(0, -208), new Vector2f(64, 32), "Temporary3");
+		GuiButtonEvent temporary4 = new GuiButtonEvent(new Vector2f(112, -208), new Vector2f(64, 32), "Temporary4");
+		GuiButtonEvent temporary5 = new GuiButtonEvent(new Vector2f(224, -208), new Vector2f(64, 32), "Temporary5") {
+			@Override
+			protected void eventClicked()
+			{
+				Window.getInstance().close();
+			}
+		};
+		
+		buttons.add(temporary);
+		buttons.add(temporary2);
+		buttons.add(temporary3);
+		buttons.add(temporary4);
+		buttons.add(temporary5);
 	}
 	
 	public void resizeCamera(Window window) {
@@ -33,12 +50,22 @@ public class Gui extends BaseObject{
 	}
 	
 	public void update(Input input) {
-		temporary.update(input);
+		if(!buttons.isEmpty())
+		{
+			for(GuiButton button:buttons)
+			{
+				button.update(input);
+			}
+		}
 	}
 	
 	public void render() {
 		shader.bind();
-		temporary.render(camera, sheet, shader);
+		
+		for(GuiButton button:buttons)
+		{
+			button.render(camera, sheet, shader);
+		}
 	}
 
 	@Override

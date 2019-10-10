@@ -30,7 +30,6 @@
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.utils.RUtils"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.Gui"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.BaseObject"/>
 <fullyQualifiedTypeName name="lwjgui.geometry.Pos"/>
 <fullyQualifiedTypeName name="lwjgui.scene.control.Button"/>
@@ -43,4 +42,14 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.io.Preferences"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.MasterHelper"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.RenderMaster"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.utils.ArrayUtils"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.Gui"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.entities.EntityPlayer"/>
+<fullyQualifiedTypeName name="org.joml.Vector2f"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.io.Window"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.utils.ScalableVector2f"/>
 </qualifiedTypeNameHistroy>

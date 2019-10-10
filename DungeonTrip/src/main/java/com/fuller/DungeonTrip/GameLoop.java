@@ -125,7 +125,7 @@ public class GameLoop {
 			}
 		}
 		Assets.deleteAsset();
-		MasterHelper.objects.clear();
+		MasterHelper.cleanList();
 		window.destroy();
 	}
 	

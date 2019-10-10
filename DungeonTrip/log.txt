@@ -1,32 +1,13 @@
-New initialization on: 10-09-2019 21:31:15
-Debug Active.
-Window Init Start.
+New initialization on: 10-10-2019 14:16:06
 GLFW Version: 3.4.0 Win32 WGL EGL OSMesa VisualC DLL
-OpenGL Version: 4.0.0 - Build 10.18.10.5069
-Input Init Start.
-Input Init End.
-Window Init End.
-Game Loop Start.
-Master Init Start.
-Tick Master Init Start.
-Tick Master Init End.
-Render Master Init Start.
-Camera Init.
-Assets: initAsset
-TileRenderer: createRender
-TileRenderer Init.
-Loading Image: /assets/textures/null.png
-Loading Image: /assets/textures/plains.png
-Loading Image: /assets/textures/sahara.png
-Loading Image: /assets/textures/tundra.png
-Loading Image: /assets/textures/hills.png
-Loading Image: /assets/textures/dawn.png
-Loading Image: /assets/textures/white.png
-Shader Init.
-World Init.
-Loading Image: /assets/levels/exampleLevel2_tiles.png
+OpenGL Version: 4.5.0 - Build 25.20.100.6472
 Deadly Number Found: Ignoring.
-Loading Image: /assets/textures/tiles.png
-Render Master Init End.
-Master Init End.
-Window Terminating.
+click
+click
+click
+click
+click
+click
+click
+click
+click

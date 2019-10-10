@@ -1,0 +1,82 @@
+package com.fuller.DungeonTrip;
+
+import java.util.ArrayList;
+
+import org.lwjgl.opengl.GL15;
+
+import com.fuller.DungeonTrip.io.Window;
+
+public class MasterHelper {
+	
+	private static ArrayList<BaseObject> objects = new ArrayList<BaseObject>();
+	
+	private static boolean freeze = false;
+	private static int timeTilUnfreeze = 0;
+	
+	public static void update()
+	{
+		if(!freeze)
+		{
+			for(BaseObject object: objects)
+			{
+				object.update();
+			}
+			
+			if(Window.getInstance().hasResized())
+			{
+				GL15.glViewport(0, 0, Window.getInstance().getWidth(), Window.getInstance().getHeight());
+			}
+		}
+		else
+		{
+			timeTilUnfreeze++;
+			
+			if(timeTilUnfreeze > 1000)
+			{
+				System.out.println(timeTilUnfreeze);
+				freeze = !freeze;
+				timeTilUnfreeze = 0;
+			}
+		}
+	}
+	
+	public static void render()
+	{
+		if(!freeze)
+		{
+			for(BaseObject object: objects)
+			{
+				object.render();
+			}
+		}
+	}
+	
+	public static void setChange(boolean change)
+	{
+		freeze = change;
+	}
+	
+	public static void addObject(BaseObject object)
+	{
+		objects.add(object);
+	}
+	
+	public static void removeObject(BaseObject bo)
+	{
+		for(BaseObject object: objects)
+		{
+			if(object == bo)
+			{
+				setChange(true);
+				objects.remove(object);
+				return;
+			}
+		}
+	}
+	
+	public static void cleanList()
+	{
+		objects.clear();
+	}
+
+}
