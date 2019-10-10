@@ -1,13 +1,10 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=update
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=23,1
 PROBLEMS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
-<<<<<<< HEAD
-platformState=1547129841809
+platformState=1562646382942
 quickStart=false
 tipsAndTricks=true
-=======
-platformState=1538872921005
-quickStart=false
-tipsAndTricks=false
->>>>>>> update

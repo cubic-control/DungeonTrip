@@ -1,7 +1,7 @@
-New initialization on: 10-08-2019 19:51:46
+New initialization on: 10-09-2019 21:31:15
 Debug Active.
 Window Init Start.
-GLFW Version: 3.3.0 Win32 WGL EGL OSMesa VisualC DLL
+GLFW Version: 3.4.0 Win32 WGL EGL OSMesa VisualC DLL
 OpenGL Version: 4.0.0 - Build 10.18.10.5069
 Input Init Start.
 Input Init End.
@@ -29,13 +29,4 @@ Deadly Number Found: Ignoring.
 Loading Image: /assets/textures/tiles.png
 Render Master Init End.
 Master Init End.
-click
-click
-click
-click
-click
-click
-click
-click
-click
 Window Terminating.

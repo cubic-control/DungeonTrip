@@ -5,14 +5,14 @@ import org.lwjgl.opengl.GL11;
 
 import com.fuller.DungeonTrip.MasterHelper;
 import com.fuller.DungeonTrip.Refs;
-import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.assets.Assets;
 import com.fuller.DungeonTrip.entities.EntityPlayer;
+import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.world.TileRenderer;
 import com.fuller.DungeonTrip.world.World;
 
 public class RenderMaster {
-	static Shader shader;
+	public static Shader shader;
 	public static Camera camera;
 	public static World world;
 	public static EntityPlayer player;
@@ -49,8 +49,7 @@ public class RenderMaster {
 	
 	public static void render()
 	{
-		world.render(TileRenderer.getInstance(), shader, camera);
-		player.render(shader, camera);
+		MasterHelper.render();
 	}
 
 }

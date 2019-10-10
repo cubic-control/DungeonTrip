@@ -5,7 +5,7 @@ import org.joml.Vector3f;
 
 import com.fuller.DungeonTrip.BaseObject;
 import com.fuller.DungeonTrip.Refs;
-import com.fuller.DungeonTrip.Window;
+import com.fuller.DungeonTrip.io.Window;
 
 public class Camera extends BaseObject{
 	private Vector3f position;

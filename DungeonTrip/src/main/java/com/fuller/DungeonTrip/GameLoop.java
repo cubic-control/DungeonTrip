@@ -4,6 +4,8 @@ import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
 
 import com.fuller.DungeonTrip.assets.Assets;
+import com.fuller.DungeonTrip.io.Preferences;
+import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.render.RenderMaster;
 
 public class GameLoop {
@@ -70,7 +72,7 @@ public class GameLoop {
 		double lastUpdateTime = System.nanoTime();
 		double lastRenderTime = System.nanoTime();
 		
-		final double TARGET_FPS = 60;
+		final double TARGET_FPS = Preferences.getDouble("TARGET_FPS");
 		final double TARGET_TIME_BETWEEN_RENDERS = 1000000000 / TARGET_FPS;
 		
 		int lastSecondTime = (int) (lastUpdateTime / 1000000000);

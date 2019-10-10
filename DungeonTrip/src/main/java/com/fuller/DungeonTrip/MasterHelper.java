@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.lwjgl.opengl.GL15;
 
+import com.fuller.DungeonTrip.io.Window;
+
 public class MasterHelper {
 	
 	public static ArrayList<BaseObject> objects = new ArrayList<BaseObject>();

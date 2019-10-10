@@ -5,6 +5,10 @@ import java.util.Date;
 
 import org.lwjgl.glfw.GLFW;
 
+import com.fuller.DungeonTrip.io.OutputRedirector;
+import com.fuller.DungeonTrip.io.Preferences;
+import com.fuller.DungeonTrip.io.Window;
+
 public class App
 {
 	//public static Log log;
@@ -16,6 +20,8 @@ public class App
     	String time = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss").format(new Date());
     	System.out.println("New initialization on: " + time);
     	
+    	Preferences.init();
+    	
         if(!GLFW.glfwInit())
         {
         	throw new IllegalStateException("Failed to initialize GLFW");
@@ -23,7 +29,7 @@ public class App
         Window.setCallbacks();
         
         // Create Classes Here
-        Window window = new Window(640, 480, "Dungeon Trip");
+        Window window = new Window(Preferences.getInt("WINDOW_WIDTH"), Preferences.getInt("WINDOW_HEIGHT"), "Dungeon Trip");
         GameLoop loop = new GameLoop();
         
         // Perform settings and args here
@@ -35,7 +41,7 @@ public class App
         		Refs.dev = true;
         		System.out.println("DevMode Active.");
         	}
-        	if(args[i].contains("-fullscreen"))
+        	if(args[i].contains("-fullscreen") || Preferences.getBoolean("FULLSCREEN"))
         	{
         		window.setFullscreen(true);
         	}

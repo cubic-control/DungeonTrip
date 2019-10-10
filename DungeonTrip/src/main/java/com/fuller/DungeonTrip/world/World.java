@@ -12,8 +12,8 @@ import org.lwjgl.stb.STBImage;
 
 import com.fuller.DungeonTrip.BaseObject;
 import com.fuller.DungeonTrip.Refs;
-import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
+import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.RenderMaster;
 import com.fuller.DungeonTrip.render.Shader;
@@ -222,5 +222,6 @@ public class World extends BaseObject{
 
 	@Override
 	public void render() {
+		this.render(TileRenderer.getInstance(), RenderMaster.shader, RenderMaster.camera);
 	}
 }

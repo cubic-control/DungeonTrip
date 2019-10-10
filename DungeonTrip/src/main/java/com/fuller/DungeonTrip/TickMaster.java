@@ -2,6 +2,8 @@ package com.fuller.DungeonTrip;
 
 import org.lwjgl.glfw.GLFW;
 
+import com.fuller.DungeonTrip.io.Window;
+
 
 public class TickMaster {
 	
@@ -19,15 +21,15 @@ public class TickMaster {
 	
 	public static void tick()
 	{
-		if(Window.getInstance().input.isKeyDown(GLFW.GLFW_KEY_ESCAPE))
+		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_ESCAPE))
 		{
 			Window.getInstance().close();
 		}
-		if(Window.getInstance().input.isKeyPressed(GLFW.GLFW_KEY_SPACE))
+		if(Window.getInstance().getInput().isKeyPressed(GLFW.GLFW_KEY_SPACE))
 		{
 			System.out.println("Space Print");
 		}
-		if(Window.getInstance().input.isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
+		if(Window.getInstance().getInput().isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
 		{
 			System.out.println("click");
 		}

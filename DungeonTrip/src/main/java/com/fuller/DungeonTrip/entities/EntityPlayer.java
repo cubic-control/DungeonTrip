@@ -5,9 +5,9 @@ import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
 import com.fuller.DungeonTrip.BaseObject;
-import com.fuller.DungeonTrip.Window;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.collision.Collision;
+import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.render.Camera;
 import com.fuller.DungeonTrip.render.Model;
 import com.fuller.DungeonTrip.render.RenderMaster;
@@ -158,5 +158,6 @@ public class EntityPlayer extends BaseObject{
 
 	@Override
 	public void render() {
+		this.render(RenderMaster.shader, RenderMaster.camera);
 	}
 }

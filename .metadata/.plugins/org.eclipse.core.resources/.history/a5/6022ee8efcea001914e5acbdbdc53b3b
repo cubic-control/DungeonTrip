@@ -1,0 +1,89 @@
+package com.fuller.DungeonTrip.io;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class Preferences {
+	private static Properties properties;
+	
+	public static void init()
+	{
+		properties = new Properties();
+		load();
+	}
+	
+	public static String getValue(String key)
+	{
+		return properties.getProperty(key);
+	}
+	
+	public static void setValue(String key, String value)
+	{
+		properties.setProperty(key, value);
+	}
+	
+	public static void load()
+	{
+		try
+		{
+			properties.loadFromXML(new FileInputStream("Preferences.xml"));
+		}
+		catch(IOException e)
+		{
+			// File did not exists
+			// Setting defaults
+			setInt("WINDOW_WIDTH", 1280);
+			setInt("WINDOW_HEIGHT", 720);
+			setBoolean("FULLSCREEN", false);
+			setBoolean("V-SYNC", false);
+			setDouble("TARGET_FPS", 60);
+			save();
+		}
+	}
+	
+	public static void save()
+	{
+		try
+		{
+			properties.storeToXML(new FileOutputStream("Preferences.xml"), "");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	// Extra Methods
+	
+	public static double getDouble(String key)
+	{
+		return Double.parseDouble(properties.getProperty(key));
+	}
+	
+	public static void setDouble(String key, double value)
+	{
+		properties.setProperty(key, Double.toString(value));
+	}
+	
+	public static int getInt(String key)
+	{
+		return Integer.parseInt(properties.getProperty(key));
+	}
+	
+	public static void setInt(String key, int value)
+	{
+		properties.setProperty(key, Integer.toString(value));
+	}
+	
+	public static boolean getBoolean(String key)
+	{
+		return Boolean.parseBoolean(properties.getProperty(key));
+	}
+	
+	public static void setBoolean(String key, boolean value)
+	{
+		properties.setProperty(key, Boolean.toString(value));
+	}
+}
