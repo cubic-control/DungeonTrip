@@ -12,3 +12,17 @@
 1570721873372	Encapsulate field 'id'
 1570723003464	Encapsulate field 'isContinueous'
 1570731386489	Delete element
+1570807324791	Delete element
+1570807718721	Encapsulate field 'vector'
+1570808277921	Delete element
+1570809313761	Delete element
+1570809441132	Delete element
+1570809557593	Delete element
+1570810635787	Delete element
+1570811976214	Move compilation unit
+1570811980318	Move compilation unit
+1570811989566	Move compilation unit
+1570812134883	Delete element
+1570815640402	Move compilation units
+1570816689517	Encapsulate field 'visible'
+1570816717228	Encapsulate field 'visible'

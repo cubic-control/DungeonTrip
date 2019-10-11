@@ -1,0 +1,10 @@
+package com.fuller.DungeonTrip.levels;
+
+public class LevelMenu extends Level{
+
+	@Override
+	public void initLevel() {
+		
+	}
+
+}

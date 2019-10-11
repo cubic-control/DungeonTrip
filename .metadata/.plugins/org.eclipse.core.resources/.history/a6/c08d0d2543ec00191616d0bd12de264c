@@ -1,0 +1,11 @@
+package com.fuller.DungeonTrip;
+
+public class Level extends BaseObject{
+
+	@Override
+	public void update() {}
+
+	@Override
+	public void render() {}
+
+}

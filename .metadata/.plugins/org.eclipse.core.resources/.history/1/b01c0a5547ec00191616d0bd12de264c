@@ -1,0 +1,12 @@
+package com.fuller.DungeonTrip.gui;
+
+import com.fuller.DungeonTrip.io.Window;
+
+public class GuiMenu extends Gui{
+
+	public GuiMenu(Window window) {
+		super(window);
+		
+	}
+
+}

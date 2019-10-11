@@ -1,0 +1,41 @@
+package com.fuller.DungeonTrip.gui;
+
+import java.util.ArrayList;
+
+import org.joml.Vector2f;
+
+import com.fuller.DungeonTrip.gui.components.Gui;
+import com.fuller.DungeonTrip.gui.components.GuiButton;
+import com.fuller.DungeonTrip.gui.components.GuiButtonEvent;
+import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.render.TileSheet;
+import com.fuller.DungeonTrip.utils.ScalableVector2f;
+
+public class GuiExample extends Gui{
+
+	public GuiExample(Window window) {
+		super(window);
+		sheet = new TileSheet("gui", 9);
+		
+		buttons = new ArrayList<GuiButton>();
+		
+		GuiButtonEvent temporary = new GuiButtonEvent(new ScalableVector2f(new Vector2f(-224, -208)), new ScalableVector2f(new Vector2f(56, 32)), "Temporary");
+		GuiButtonEvent temporary2 = new GuiButtonEvent(new ScalableVector2f(new Vector2f(-112, -208)), new ScalableVector2f(new Vector2f(56, 32)), "Temporary2");
+		GuiButtonEvent temporary3 = new GuiButtonEvent(new ScalableVector2f(new Vector2f(0, -208)), new ScalableVector2f(new Vector2f(56, 32)), "Temporary3");
+		GuiButtonEvent temporary4 = new GuiButtonEvent(new ScalableVector2f(new Vector2f(112, -208)), new ScalableVector2f(new Vector2f(56, 32)), "Temporary4");
+		GuiButtonEvent temporary5 = new GuiButtonEvent(new ScalableVector2f(new Vector2f(224, -208)), new ScalableVector2f(new Vector2f(56, 32)), "Temporary5") {
+			@Override
+			protected void eventClicked()
+			{
+				Window.getInstance().close();
+			}
+		};
+		
+		buttons.add(temporary);
+		buttons.add(temporary2);
+		buttons.add(temporary3);
+		buttons.add(temporary4);
+		buttons.add(temporary5);
+	}
+
+}

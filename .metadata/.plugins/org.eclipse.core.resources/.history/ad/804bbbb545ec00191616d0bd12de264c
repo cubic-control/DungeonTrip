@@ -1,0 +1,23 @@
+package com.fuller.DungeonTrip;
+
+import com.fuller.DungeonTrip.Level;
+import com.fuller.DungeonTrip.gui.Gui;
+import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.render.RenderMaster;
+import com.fuller.DungeonTrip.world.World;
+
+public class LevelExample extends Level{
+
+	@Override
+	public void initLevel() {
+		World world = new World("exampleLevel2");
+		RenderMaster.world = world;
+		world.calculateView(Window.getInstance());
+		levelObjects.add(world);
+		
+		Gui gui = new Gui(Window.getInstance());
+		RenderMaster.gui = gui;
+		levelObjects.add(gui);
+	}
+
+}

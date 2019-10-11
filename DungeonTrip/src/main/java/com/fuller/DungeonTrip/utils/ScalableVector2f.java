@@ -4,21 +4,47 @@ import org.joml.Vector2f;
 
 import com.fuller.DungeonTrip.io.Window;
 
-public class ScalableVector2f {
+public class ScalableVector2f{
+	private Vector2f original;
+	private Vector2f vector;
 	
-	public static Vector2f scalableV2f(Vector2f normal)
+	public ScalableVector2f(Vector2f normal)
 	{
+		original = normal;
+		
 		if(Window.getInstance().getWidth() == 640 && Window.getInstance().getHeight() == 480)
 		{
-			return normal;
+			setVector(normal);
 		}
 		else
 		{
-			float xfactor = Window.getInstance().getWidth() / 640;
-			float yfactor = Window.getInstance().getHeight() / 480;
+			float xfactor = (Window.getInstance().getWidth() / 640);
+			float yfactor = (Window.getInstance().getHeight() / 480);
 			
-			return new Vector2f((normal.x * xfactor), (normal.y * yfactor));
+			setVector(new Vector2f((normal.x * xfactor), (normal.y * yfactor)));
 		}
+	}
+
+	public Vector2f getVector() {
+		if(Window.getInstance().hasResized())
+		{
+			if(Window.getInstance().getWidth() == 640 && Window.getInstance().getHeight() == 480)
+			{
+				setVector(original);
+			}
+			else
+			{
+				float xfactor = (Window.getInstance().getWidth() / 640);
+				float yfactor = (Window.getInstance().getHeight() / 480);
+				
+				setVector(new Vector2f((original.x * xfactor), (original.y * yfactor)));
+			}
+		}
+		return vector;
+	}
+
+	private void setVector(Vector2f vector) {
+		this.vector = vector;
 	}
 
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
 <fullyQualifiedTypeName name="org.lwjgl.openal.AL10"/>
 <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicBoolean"/>
@@ -20,7 +19,6 @@
 <fullyQualifiedTypeName name="java.nio.file.Paths"/>
 <fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.Refs"/>
-<fullyQualifiedTypeName name="com.fuller.DungeonTrip.assets.Assets"/>
 <fullyQualifiedTypeName name="java.nio.ByteBuffer"/>
 <fullyQualifiedTypeName name="java.nio.IntBuffer"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
@@ -43,13 +41,23 @@
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.io.Preferences"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.MasterHelper"/>
-<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.RenderMaster"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.utils.ArrayUtils"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.Gui"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.entities.EntityPlayer"/>
 <fullyQualifiedTypeName name="org.joml.Vector2f"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.io.Window"/>
 <fullyQualifiedTypeName name="com.fuller.DungeonTrip.utils.ScalableVector2f"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.collision.ScalableAABB"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.Level"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.assets.Assets"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.Gui"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.LevelExample"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.LevelBlank"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.GuiMenu"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.components.Gui"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.levels.LevelMenu"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.levels.LevelExample"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.gui.GuiPauseMenu"/>
+<fullyQualifiedTypeName name="com.fuller.DungeonTrip.render.RenderMaster"/>
 </qualifiedTypeNameHistroy>

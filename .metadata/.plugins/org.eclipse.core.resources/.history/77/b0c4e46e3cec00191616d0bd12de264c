@@ -1,0 +1,24 @@
+package com.fuller.DungeonTrip.utils;
+
+import org.joml.Vector2f;
+
+import com.fuller.DungeonTrip.io.Window;
+
+public class ScalableVector2f {
+	
+	public static Vector2f scalableV2f(Vector2f normal)
+	{
+		if(Window.getInstance().getWidth() == 640 && Window.getInstance().getHeight() == 480)
+		{
+			return normal;
+		}
+		else
+		{
+			float xfactor = (Window.getInstance().getWidth() / 640);
+			float yfactor = (Window.getInstance().getHeight() / 480);
+			
+			return new Vector2f((normal.x * xfactor), (normal.y * yfactor));
+		}
+	}
+
+}

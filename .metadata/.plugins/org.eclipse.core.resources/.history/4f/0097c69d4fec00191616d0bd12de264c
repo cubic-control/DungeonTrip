@@ -1,0 +1,53 @@
+package com.fuller.DungeonTrip.gui.components;
+
+import java.util.ArrayList;
+
+import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.io.Input;
+import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.render.Camera;
+import com.fuller.DungeonTrip.render.Shader;
+import com.fuller.DungeonTrip.render.TileSheet;
+
+public class Gui extends BaseObject{
+	private Shader shader;
+	private Camera camera;
+	protected TileSheet sheet;
+	
+	protected ArrayList<GuiButton> buttons;
+	
+	public Gui(Window window) {
+		shader = new Shader("gui");
+		camera = new Camera(window.getWidth(), window.getHeight());
+	}
+	
+	public void resizeCamera(Window window) {
+		camera.setProjection(window.getWidth(), window.getHeight());
+	}
+	
+	public void update(Input input) {
+		for(GuiButton button:buttons)
+		{
+			button.update(input);
+		}
+	}
+	
+	@Override
+	public void render() {
+		shader.bind();
+		
+		for(GuiButton button:buttons)
+		{
+			button.render(camera, sheet, shader);
+		}
+	}
+
+	@Override
+	public void update() {
+		if(Window.getInstance().hasResized())
+		{
+			resizeCamera(Window.getInstance());
+		}
+		update(Window.getInstance().getInput());
+	}
+}

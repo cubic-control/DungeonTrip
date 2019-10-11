@@ -1,0 +1,13 @@
+package com.fuller.DungeonTrip.gui;
+
+import com.fuller.DungeonTrip.gui.components.Gui;
+import com.fuller.DungeonTrip.io.Window;
+
+public class GuiPauseMenu extends Gui{
+
+	public GuiPauseMenu(Window window) {
+		super(window);
+		
+	}
+
+}

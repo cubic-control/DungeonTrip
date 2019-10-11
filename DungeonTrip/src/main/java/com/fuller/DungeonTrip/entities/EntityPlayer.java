@@ -5,6 +5,7 @@ import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
 import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.assets.Assets;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.collision.Collision;
 import com.fuller.DungeonTrip.io.Window;
@@ -25,24 +26,7 @@ public class EntityPlayer extends BaseObject{
 	
 	public EntityPlayer()
 	{
-		float[] vertices = new float[] {
-				-1f, 1f, 0,
-				1f, 1f, 0,
-				1f, -1f, 0,
-				-1f, -1f, 0
-		};
-		float[] texture = new float[] {
-				0, 0,
-				1, 0,
-				1, 1,
-				0, 1
-		};
-		int[] indices = new int[] {
-				0, 1, 2,
-				2, 3, 0
-		};
-		
-		model = new Model(vertices, texture, indices);
+		model = Assets.getModel();
 		this.texture = new Texture("tiles");
 		
 		transform = new Transform();

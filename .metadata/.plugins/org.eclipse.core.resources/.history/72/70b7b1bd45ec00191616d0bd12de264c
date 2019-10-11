@@ -1,0 +1,12 @@
+package com.fuller.DungeonTrip.levels;
+
+import com.fuller.DungeonTrip.Level;
+
+public class LevelBlank extends Level{
+
+	@Override
+	public void initLevel() {
+		
+	}
+
+}

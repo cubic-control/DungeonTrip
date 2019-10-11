@@ -1,0 +1,21 @@
+package com.fuller.DungeonTrip;
+
+public class GameState {
+	public static int CURRENT_STATE;
+	private static int STATE_STARTUP = 0;
+	private static int STATE_MENU = 1;
+	private static int STATE_GAME = 2;
+	private static int STATE_CREDITS = 3;
+	
+	public GameState()
+	{
+		CURRENT_STATE = STATE_STARTUP;
+	}
+	
+	public static void setState(int integer)
+	{
+		if(integer <= 3) CURRENT_STATE = integer;
+		else System.out.println("INVALID SATE: " + integer);
+	}
+
+}

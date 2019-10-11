@@ -1,0 +1,11 @@
+package com.fuller.DungeonTrip.collision;
+
+import com.fuller.DungeonTrip.utils.ScalableVector2f;
+
+public class ScalableAABB extends AABB{
+
+	public ScalableAABB(ScalableVector2f center, ScalableVector2f half_extent) {
+		super(center.getVector(), half_extent.getVector());
+	}
+
+}

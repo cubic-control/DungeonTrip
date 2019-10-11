@@ -1,0 +1,48 @@
+package com.fuller.DungeonTrip;
+
+import java.util.ArrayList;
+
+import com.fuller.DungeonTrip.render.RenderMaster;
+
+public abstract class Level extends BaseObject{
+	
+	protected ArrayList<BaseObject> levelObjects = new ArrayList<BaseObject>();
+	
+	public static void loadLevel(Level level)
+	{
+		MasterHelper.removeObject(RenderMaster.level);
+		MasterHelper.addObject(level);
+		
+		if(!RenderMaster.level.levelObjects.isEmpty())
+		{
+			RenderMaster.level.destroy();
+		}
+		RenderMaster.level = level;
+	}
+	
+	@Override
+	public void update()
+	{
+		for(BaseObject object: levelObjects)
+		{
+			object.update();
+		}
+	}
+	
+	@Override
+	public void render()
+	{
+		for(BaseObject object: levelObjects)
+		{
+			object.render();
+		}
+	}
+	
+	public abstract void initLevel();
+	
+	public void destroy()
+	{
+		levelObjects.clear();
+	}
+
+}

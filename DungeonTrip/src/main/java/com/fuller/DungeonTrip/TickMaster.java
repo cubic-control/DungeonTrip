@@ -2,7 +2,10 @@ package com.fuller.DungeonTrip;
 
 import org.lwjgl.glfw.GLFW;
 
+import com.fuller.DungeonTrip.gui.GuiPauseMenu;
 import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.levels.LevelExample;
+import com.fuller.DungeonTrip.render.RenderMaster;
 
 
 public class TickMaster {
@@ -21,18 +24,30 @@ public class TickMaster {
 	
 	public static void tick()
 	{
-		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_ESCAPE))
+		if(Window.getInstance().getInput().isKeyPressed(GLFW.GLFW_KEY_ESCAPE))
 		{
-			Window.getInstance().close();
+			if(RenderMaster.level instanceof LevelExample)
+			{
+				for(BaseObject object: RenderMaster.level.levelObjects)
+				{
+					if(object instanceof GuiPauseMenu)
+					{
+						((GuiPauseMenu)object).showAllButtons();
+						RenderMaster.level.paused = true;
+						return;
+					}
+				}
+			}else Window.getInstance().close();
 		}
 		if(Window.getInstance().getInput().isKeyPressed(GLFW.GLFW_KEY_SPACE))
 		{
-			System.out.println("Space Print");
+			
 		}
 		if(Window.getInstance().getInput().isMouseButtonDown(GLFW.GLFW_MOUSE_BUTTON_1))
 		{
-			System.out.println("click");
+			
 		}
+		RenderMaster.level.update();
 		MasterHelper.update();
 	}
 

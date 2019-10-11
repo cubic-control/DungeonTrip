@@ -1,0 +1,63 @@
+package com.fuller.DungeonTrip.render;
+
+import org.joml.Vector3f;
+import org.lwjgl.opengl.GL11;
+
+import com.fuller.DungeonTrip.MasterHelper;
+import com.fuller.DungeonTrip.Refs;
+import com.fuller.DungeonTrip.assets.Assets;
+import com.fuller.DungeonTrip.entities.EntityPlayer;
+import com.fuller.DungeonTrip.gui.Gui;
+import com.fuller.DungeonTrip.io.Window;
+import com.fuller.DungeonTrip.world.TileRenderer;
+import com.fuller.DungeonTrip.world.World;
+
+public class RenderMaster {
+	public static Shader shader;
+	public static Camera camera;
+	public static World world;
+	public static EntityPlayer player;
+	public static Gui gui;
+	
+	public static void init()
+	{
+		if(Refs.debug)
+		{
+			System.out.println("Render Master Init Start.");
+		}
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		
+		camera = new Camera(Window.getInstance().getWidth(), Window.getInstance().getHeight());
+		camera.setPosition(new Vector3f(0, 0, 0));
+		MasterHelper.addObject(camera);
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		
+		Assets.initAsset();
+		TileRenderer.createRender();
+		
+		shader = new Shader("shader");
+		
+		// World Creation (PLACE IN A LEVEL FILE)
+		
+		world = new World("exampleLevel2");
+		world.calculateView(Window.getInstance());
+		MasterHelper.addObject(world);
+		player = new EntityPlayer();
+		MasterHelper.addObject(player);
+		
+		gui = new Gui(Window.getInstance());
+		MasterHelper.addObject(gui);
+		
+		if(Refs.debug)
+		{
+			System.out.println("Render Master Init End.");
+		}
+	}
+	
+	public static void render()
+	{
+		MasterHelper.render();
+	}
+
+}

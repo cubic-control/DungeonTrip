@@ -1,0 +1,20 @@
+package com.fuller.DungeonTrip;
+
+import com.fuller.DungeonTrip.render.RenderMaster;
+
+public class Level extends BaseObject{
+	
+	public static void loadLevel(Level level)
+	{
+		MasterHelper.removeObject(RenderMaster.level);
+		MasterHelper.addObject(level);
+		RenderMaster.level = level;
+	}
+
+	@Override
+	public void update() {}
+
+	@Override
+	public void render() {}
+
+}
