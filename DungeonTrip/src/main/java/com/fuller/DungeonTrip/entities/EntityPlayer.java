@@ -4,58 +4,33 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
-import com.fuller.DungeonTrip.BaseObject;
-import com.fuller.DungeonTrip.assets.Assets;
 import com.fuller.DungeonTrip.collision.AABB;
 import com.fuller.DungeonTrip.collision.Collision;
 import com.fuller.DungeonTrip.io.Window;
 import com.fuller.DungeonTrip.render.Camera;
-import com.fuller.DungeonTrip.render.Model;
-import com.fuller.DungeonTrip.render.RenderMaster;
-import com.fuller.DungeonTrip.render.Shader;
 import com.fuller.DungeonTrip.render.Texture;
 import com.fuller.DungeonTrip.world.World;
 
-public class EntityPlayer extends BaseObject{
-	private Model model;
-	private AABB bounding_box;
-	private Texture texture;
-	private Transform transform;
+public class EntityPlayer extends EntityLiving{
 	
 	static float speed = 0.45f;
 	
-	public EntityPlayer()
+	public EntityPlayer(Transform transform)
 	{
-		model = Assets.getModel();
-		this.texture = new Texture("tiles");
-		
-		transform = new Transform();
-		transform.scale = new Vector3f(16, 16, 1);
-		transform.pos = new Vector3f(10, -10, 0);
+		super(new Texture("tiles"), transform);
 		
 		bounding_box = new AABB(new Vector2f(transform.pos.x, transform.pos.y), new Vector2f(1, 1));
 	}
 	
 	public void update(float delta, Window window, Camera camera, World world)
 	{
-		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_A))
-		{
-			transform.pos.add(new Vector3f(-speed, 0, 0));
-		}
-		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_D))
-		{
-			transform.pos.add(new Vector3f(speed, 0, 0));
-		}
-		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_W))
-		{
-			transform.pos.add(new Vector3f(0, speed, 0));
-		}
-		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_S))
-		{
-			transform.pos.add(new Vector3f(0, -speed, 0));
-		}
+		Vector2f movement = new Vector2f();
 		
-		bounding_box.getCenter().set(transform.pos.x, transform.pos.y);
+		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_A)) movement.add(new Vector2f(-speed, 0));
+		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_D)) movement.add(new Vector2f(speed, 0));
+		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_W)) movement.add(new Vector2f(0, speed));
+		if(Window.getInstance().getInput().isKeyDown(GLFW.GLFW_KEY_S)) movement.add(new Vector2f(0, -speed));
+		move(movement);
 		
 		AABB[] boxes = new AABB[25];
 		
@@ -124,24 +99,5 @@ public class EntityPlayer extends BaseObject{
 		
 		camera.getPosition().lerp(transform.pos.mul(-world.getScale(), new Vector3f()), 0.1f);
 		//camera.setPosition(transform.pos.mul(-world.getScale(), new Vector3f()));
-	}
-	
-	public void render(Shader shader, Camera camera)
-	{
-		shader.bind();
-		shader.setUniform("sampler", 0);
-		shader.setUniform("projection", transform.getProjection(camera.getProjection()));
-		texture.bind(0);
-		model.render();
-	}
-
-	@Override
-	public void update() {
-		this.update(0, Window.getInstance(), RenderMaster.camera, RenderMaster.world);
-	}
-
-	@Override
-	public void render() {
-		this.render(RenderMaster.shader, RenderMaster.camera);
 	}
 }

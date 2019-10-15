@@ -23,6 +23,11 @@ public class RUtils {
 		
 		InputStream imageFile = RUtils.class.getResourceAsStream(fileName);
 		
+		if(imageFile == null)
+		{
+			imageFile = RUtils.class.getResourceAsStream("null");
+		}
+		
 		byte[] imageData = IOUtils.toByteArray(imageFile);
 		
 		imageFile.close();

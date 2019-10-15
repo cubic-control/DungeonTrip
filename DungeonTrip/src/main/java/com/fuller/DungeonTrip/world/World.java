@@ -23,6 +23,7 @@ public class World extends BaseObject{
 	private int viewX, viewY;
 	private byte[] tiles;
 	private AABB[] bounding_boxes;
+	//private List<Entity> entities;
 	private int width, height;
 	private int scale;
 	
@@ -36,7 +37,7 @@ public class World extends BaseObject{
 		}
 		
 		try {
-			tileSheet(world);
+			loadWorld(world);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -47,15 +48,16 @@ public class World extends BaseObject{
 		//STBImage.stbi_image_free(entity_sheet);
 	}
 	
-	private void tileSheet(String world) throws IOException
+	private void loadWorld(String world) throws IOException
 	{
 		IntBuffer w = BufferUtils.createIntBuffer(1);
 		IntBuffer h = BufferUtils.createIntBuffer(1);
 		IntBuffer comp = BufferUtils.createIntBuffer(1);
 		
-		ByteBuffer tile_sheet = RUtils.loadImage(Refs.lvl + world + "_tiles.png", w, h, comp, 4);
+		ByteBuffer mapTiles = RUtils.loadImage(Refs.lvl + world + "_tiles.png", w, h, comp, 4);
+		//ByteBuffer entityTiles = RUtils.loadImage(Refs.lvl + world + "_entities.png", w, h, comp, 4);
 		
-		if(tile_sheet == null)
+		if(mapTiles == null /*|| entityTiles == null*/)
 		{
 			throw new RuntimeException("Failed to load level file!" + System.lineSeparator() + STBImage.stbi_failure_reason());
 		}
@@ -69,12 +71,16 @@ public class World extends BaseObject{
 		
 		tiles = new byte[width * height];
 		bounding_boxes = new AABB[width * height];
+		//entities = new ArrayList<>();
+		
+		//Transform transform;
 		
 		for(int y = 0; y < height; y++)
 		{
 			for(int x = 0; x < width; x++)
 			{
-				int red = (tile_sheet.get((x + y * width) * 4)) & 0xFF;
+				int red = (mapTiles.get((x + y * width) * 4)) & 0xFF;
+				//int entityIndex = (entityTiles.get((x + y * width) * 4)) & 0xFF;
 				Tile t;
 				
 				try
@@ -90,9 +96,27 @@ public class World extends BaseObject{
 				{
 					setTile(t, x, y);
 				}
+				
+				//if(entityIndex > 0)
+				//{
+					//transform = new Transform();
+					//transform.pos.x = x * 2;
+					//transform.pos.y = -y * 2;
+					
+					//switch(entityIndex)
+					//{
+					//case 1:
+						//EntityPlayer player = new EntityPlayer(transform);
+						//entities.add(player);
+						//RenderMaster.camera.getPosition().set(transform.pos.mul(-scale, new Vector3f()));
+						//break;
+					//default:
+						//break;
+					//}
+				//}
 			}
 		}
-		STBImage.stbi_image_free(tile_sheet);
+		STBImage.stbi_image_free(mapTiles);
 	}
 	
 	public World()
@@ -136,8 +160,27 @@ public class World extends BaseObject{
 				}
 			}
 		}
+		/*
+		for (Entity entity : entities) {
+			entity.render(shader, camera);
+		}
+		*/
 	}
-	
+	/*
+	public void update(float delta, Window window, Camera camera) {
+		for (Entity entity : entities) {
+			entity.update(delta, window, camera, this);
+		}
+		
+		for (int i = 0; i < entities.size(); i++) {
+			entities.get(i).collideWithTiles(this);
+			for (int j = i + 1; j < entities.size(); j++) {
+				entities.get(i).collideWithEntity(entities.get(j));
+			}
+			entities.get(i).collideWithTiles(this);
+		}
+	}
+	*/
 	public void correctCamera(Camera camera, Window window)
 	{
 		Vector3f pos = camera.getPosition();

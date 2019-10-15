@@ -1,4 +1,3 @@
-New initialization on: 10-11-2019 14:13:56
+New initialization on: 10-15-2019 14:12:13
 GLFW Version: 3.4.0 Win32 WGL EGL OSMesa VisualC DLL
 OpenGL Version: 4.5.0 - Build 25.20.100.6472
-Deadly Number Found: Ignoring.

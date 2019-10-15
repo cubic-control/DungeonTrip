@@ -11,6 +11,10 @@ public class Tile {
 	public static final Tile hills = new Tile("hills");
 	public static final Tile dawn = new Tile("dawn");
 	public static final Tile white = new Tile("white");
+	public static final Tile wall00 = new Tile("wall00").setSolid();
+	public static final Tile floor00 = new Tile("floor00");
+	public static final Tile floor01 = new Tile("floor01");
+	public static final Tile floor02 = new Tile("floor02");
 	// Convert above values to static array and init them later.
 		// Use this when adding DLC (Separate Package)
 	

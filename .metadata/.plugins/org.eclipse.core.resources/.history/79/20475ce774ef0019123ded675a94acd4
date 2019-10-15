@@ -1,0 +1,11 @@
+package com.fuller.DungeonTrip.entities;
+
+import com.fuller.DungeonTrip.render.Texture;
+
+public class EntityLiving extends Entity{
+
+	public EntityLiving(Texture texture, Transform transform) {
+		super(texture, transform);
+	}
+
+}

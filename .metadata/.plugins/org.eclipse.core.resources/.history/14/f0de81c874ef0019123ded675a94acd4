@@ -1,0 +1,47 @@
+package com.fuller.DungeonTrip.entities;
+
+import org.joml.Vector2f;
+import org.joml.Vector3f;
+
+import com.fuller.DungeonTrip.BaseObject;
+import com.fuller.DungeonTrip.assets.Assets;
+import com.fuller.DungeonTrip.collision.AABB;
+import com.fuller.DungeonTrip.render.Model;
+import com.fuller.DungeonTrip.render.Texture;
+
+public class Entity extends BaseObject{
+	private Model model;
+	protected AABB bounding_box;
+	private Texture texture;
+	
+	protected Transform transform;
+	
+	public Entity(Texture texture, Transform transform) {
+		model = Assets.getModel();
+		this.texture = texture;
+		
+		this.transform = transform;
+		
+		bounding_box = new AABB(new Vector2f(transform.pos.x, transform.pos.y), new Vector2f(transform.scale.x, transform.scale.y));
+	}
+	
+	public void move(Vector2f direction)
+	{
+		transform.pos.add(new Vector3f(direction, 0));
+		
+		bounding_box.getCenter().set(transform.pos.x, transform.pos.y);
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
